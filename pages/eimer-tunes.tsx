@@ -20,7 +20,7 @@ export const LinkInBio: NextPage<{ playlists: Playlists }> = ({
       <div className="pt-4 pb-12">
         <h1 className="w-full font-bold opacity-80 text-center text-3xl">EimerTunes</h1>
         <h3 className="w-full text-center text-xl py-2">
-          Trying to break out of my filter bubble, I started creating monthly playlists, containing everythin from fresh finds, tracks I re-discovered or just discovered after their hype
+          Trying to break out of my filter bubble I started creating monthly playlists containing everythin from fresh finds, tracks I re-discovered or songs I just discovered after their hype
         </h3>
       </div>
       <ul className="w-full">
