@@ -4,7 +4,7 @@ export const getGlobalData = () => {
     : 'eimerreis.de';
   const blogTitle = process.env.BLOG_TITLE
     ? decodeURI(process.env.BLOG_TITLE)
-    : 'Blog';
+    : 'Some thoughts about frontend development, React.js and other things that catch my interest.';
   const footerText = process.env.BLOG_FOOTER_TEXT
     ? decodeURI(process.env.BLOG_FOOTER_TEXT)
     : 'All rights reserved.';

@@ -1,25 +1,21 @@
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
 
-import Footer from '../components/Footer';
 import Header from '../components/Header';
-import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
 export default function Index({ posts, globalData }) {
   return (
-    <Layout>
+    <>
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <main className="w-full">
         <p className="text-xl lg:text-xl mb-12">
-          Some thoughts about frontend development, React.js and other things that catch my interest.
+          {globalData.blogTitle}
         </p>
-        <span>
-          
-        </span>
+        <span></span>
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -49,16 +45,7 @@ export default function Index({ posts, globalData }) {
           ))}
         </ul>
       </main>
-      <Footer copyrightText={globalData.footerText} />
-      <GradientBackground
-        variant="large"
-        className="fixed top-20 opacity-40 dark:opacity-60"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
-    </Layout>
+    </>
   );
 }
 
