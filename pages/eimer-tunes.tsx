@@ -14,7 +14,7 @@ export const LinkInBio: NextPage<{ playlists: Playlists }> = ({
   playlists,
 }) => {
   return (
-    <Layout>
+    <>
       <SEO title={`EimerTunes | eimerreis.de`} description={`Monthly spotify playlists curated by eimerreis`} />
       <Header name="eimerreis" />
       <div className="pt-4 pb-12">
@@ -38,7 +38,7 @@ export const LinkInBio: NextPage<{ playlists: Playlists }> = ({
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   );
 };
 

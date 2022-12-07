@@ -36,7 +36,7 @@ export default function PostPage({
   globalData,
 }) {
   return (
-    <Layout>
+    <>
       <SEO
         title={`${frontMatter.title} - ${globalData.name}`}
         description={frontMatter.description}
@@ -85,16 +85,7 @@ export default function PostPage({
           )}
         </div>
       </article>
-      <Footer />
-      <GradientBackground
-        variant="large"
-        className="absolute -top-32 opacity-30 dark:opacity-50"
-      />
-      <GradientBackground
-        variant="small"
-        className="absolute bottom-0 opacity-20 dark:opacity-10"
-      />
-    </Layout>
+    </>
   );
 }
 
