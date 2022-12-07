@@ -1,0 +1,1771 @@
+{
+  "href" : "https://api.spotify.com/v1/users/eimerreis/playlists?offset=0&limit=50",
+  "items" : [ {
+    "collaborative" : false,
+    "description" : "Welcome To One Of The Best UK Garage &amp; House Playlists EVER! Follow &amp; Message Me On Instagram (@kylewillats) If You Want A Track Added To This Playlist! ",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0Hrw9ePkPz1Y7spXQRJ71v"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0Hrw9ePkPz1Y7spXQRJ71v",
+    "id" : "0Hrw9ePkPz1Y7spXQRJ71v",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb163db1b992320e9d1f01af5e",
+      "width" : null
+    } ],
+    "name" : "UK Garage & House",
+    "owner" : {
+      "display_name" : "Kyle Willats",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/house.of.fun"
+      },
+      "href" : "https://api.spotify.com/v1/users/house.of.fun",
+      "id" : "house.of.fun",
+      "type" : "user",
+      "uri" : "spotify:user:house.of.fun"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NDc1LGEwNjAxYTNkYThkODQ0NTJjNWU2NjZkZWI0ZGUzY2Y3NjIzNzU0ZmM=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0Hrw9ePkPz1Y7spXQRJ71v/tracks",
+      "total" : 392
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0Hrw9ePkPz1Y7spXQRJ71v"
+  }, {
+    "collaborative" : false,
+    "description" : "Work and study to the sound of soft electronic music.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DX0wMD4IoQ5aJ"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX0wMD4IoQ5aJ",
+    "id" : "37i9dQZF1DX0wMD4IoQ5aJ",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f00000003505d1fb099f23271355aa5a1",
+      "width" : null
+    } ],
+    "name" : "Electronic Focus",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY2OTM3NjUwMCwwMDAwMDAwMGQzNzI4Y2QwNDA4ZGNiNjc4MzkxMDA0Y2U1MDYzM2Yx",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX0wMD4IoQ5aJ/tracks",
+      "total" : 174
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DX0wMD4IoQ5aJ"
+  }, {
+    "collaborative" : false,
+    "description" : "A blend of music for eimerreis and mirisalzmann. Updates daily.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1EJDXYwp2uRDgV"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1EJDXYwp2uRDgV",
+    "id" : "37i9dQZF1EJDXYwp2uRDgV",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://blend-playlist-covers.spotifycdn.com/v2/blend_LARGE-gold-yellow-en.jpg",
+      "width" : null
+    } ],
+    "name" : "mirisalzmann + eimerreis",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MCwwMDAwMDAwMDNhN2QzYjcyZjg4NWMwOWJjZTIyZmQwMzcwODZhNDQy",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1EJDXYwp2uRDgV/tracks",
+      "total" : 50
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1EJDXYwp2uRDgV"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/55h8rtyTsah5IB7LSsnQZP"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/55h8rtyTsah5IB7LSsnQZP",
+    "id" : "55h8rtyTsah5IB7LSsnQZP",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2732e7eb8a17c670a2b77b772bcab67616d0000b27392b35f67730d7e44821edcb9ab67616d0000b273f44b99385b94fa4bc9dd8ec4ab67616d0000b273ff1df0c5e7e24a854ab2c0e4",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2732e7eb8a17c670a2b77b772bcab67616d0000b27392b35f67730d7e44821edcb9ab67616d0000b273f44b99385b94fa4bc9dd8ec4ab67616d0000b273ff1df0c5e7e24a854ab2c0e4",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2732e7eb8a17c670a2b77b772bcab67616d0000b27392b35f67730d7e44821edcb9ab67616d0000b273f44b99385b94fa4bc9dd8ec4ab67616d0000b273ff1df0c5e7e24a854ab2c0e4",
+      "width" : 60
+    } ],
+    "name" : "Dezember 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MTYsZTYyOTk2NWM5MDViODI0ODg2ODBjOGE2ZDQ5ZGM3NjI0MWE3OTZjZA==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/55h8rtyTsah5IB7LSsnQZP/tracks",
+      "total" : 14
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:55h8rtyTsah5IB7LSsnQZP"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5Mvx4XftokpCkgBp9Oz0Gv"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5Mvx4XftokpCkgBp9Oz0Gv",
+    "id" : "5Mvx4XftokpCkgBp9Oz0Gv",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273025dacb513f2b67e6432d56eab67616d0000b2731c96a4be7b3a78206d8babf4ab67616d0000b2732cbbf9cf0f84c580be382151ab67616d0000b273ef72f4bf5eef86532a2d08a2",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273025dacb513f2b67e6432d56eab67616d0000b2731c96a4be7b3a78206d8babf4ab67616d0000b2732cbbf9cf0f84c580be382151ab67616d0000b273ef72f4bf5eef86532a2d08a2",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273025dacb513f2b67e6432d56eab67616d0000b2731c96a4be7b3a78206d8babf4ab67616d0000b2732cbbf9cf0f84c580be382151ab67616d0000b273ef72f4bf5eef86532a2d08a2",
+      "width" : 60
+    } ],
+    "name" : "November 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MjIsNWZkNjcwMTI5ZTNhMDU0OTliYjIxZjQ3MzI0YjYyOTJmNDBjNTBlNg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5Mvx4XftokpCkgBp9Oz0Gv/tracks",
+      "total" : 21
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5Mvx4XftokpCkgBp9Oz0Gv"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5NQgOkoSSujYu4VP7NpreZ"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5NQgOkoSSujYu4VP7NpreZ",
+    "id" : "5NQgOkoSSujYu4VP7NpreZ",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbc7fe8cc713bbed2622bc2e63",
+      "width" : null
+    } ],
+    "name" : "Oktober 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MzgsYWRkM2FlNjc0MDYxYmUxOWQ3NWYzNTE5Mjg0NWQzOTE2OTc2ZjA0Mg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5NQgOkoSSujYu4VP7NpreZ/tracks",
+      "total" : 31
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5NQgOkoSSujYu4VP7NpreZ"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3fG6EwTWk2qA5y0rGR80cM"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3fG6EwTWk2qA5y0rGR80cM",
+    "id" : "3fG6EwTWk2qA5y0rGR80cM",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb203728d1e07af90b9413bfa4",
+      "width" : null
+    } ],
+    "name" : "September 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MzcsYzJlNzI2Y2IxZmFlMmNhMzA0ZDhiNTI4OWJhYzBiMWIwNTY4YWQ5ZQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3fG6EwTWk2qA5y0rGR80cM/tracks",
+      "total" : 29
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3fG6EwTWk2qA5y0rGR80cM"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2PcaH36bvnhxapU0fBZdeF"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2PcaH36bvnhxapU0fBZdeF",
+    "id" : "2PcaH36bvnhxapU0fBZdeF",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb7ed82681cefd0e033b0aa3ec",
+      "width" : null
+    } ],
+    "name" : "August 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MjAsZDdhNTc3Y2ZjYjJlY2YwNGFmMmU5NzQ2ZTY1YzhlZWQzZjFhNzRmZA==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2PcaH36bvnhxapU0fBZdeF/tracks",
+      "total" : 18
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2PcaH36bvnhxapU0fBZdeF"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4DQL6eDdpxRqIBLxn9VfB0"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4DQL6eDdpxRqIBLxn9VfB0",
+    "id" : "4DQL6eDdpxRqIBLxn9VfB0",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb53846dfed7695f0173763226",
+      "width" : null
+    } ],
+    "name" : "Juli 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MzksNDc5MWM1Yjc5ZThiMzk0NjNkYWYzODZlY2JmODk3ODdiYmJjNWVjMw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4DQL6eDdpxRqIBLxn9VfB0/tracks",
+      "total" : 33
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4DQL6eDdpxRqIBLxn9VfB0"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3LFNF68mGhItwl8kWUkD9F"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3LFNF68mGhItwl8kWUkD9F",
+    "id" : "3LFNF68mGhItwl8kWUkD9F",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb4b93e05269afe43c3d953a97",
+      "width" : null
+    } ],
+    "name" : "Juni 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "NDksZjg2MjA0N2EyOTZjMWIxOTBiY2ZiNWQwMTcxNjhjZDY4ZTY5ZjVhOQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3LFNF68mGhItwl8kWUkD9F/tracks",
+      "total" : 37
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3LFNF68mGhItwl8kWUkD9F"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7goCF9OcnX4RhfclLiBMdq"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7goCF9OcnX4RhfclLiBMdq",
+    "id" : "7goCF9OcnX4RhfclLiBMdq",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbe28d2c61888b11db2b67e47a",
+      "width" : null
+    } ],
+    "name" : "Mai 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "NDIsNWQ5MmI1MjZiMjY2MjUzYmVhNjMzZjgxZjMwZmYzZjAwMThiYWRhYQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7goCF9OcnX4RhfclLiBMdq/tracks",
+      "total" : 27
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7goCF9OcnX4RhfclLiBMdq"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6EiJxnIZhhzfQWSOLJL1LL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6EiJxnIZhhzfQWSOLJL1LL",
+    "id" : "6EiJxnIZhhzfQWSOLJL1LL",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbd1c694aaadc3e3d44f2e6eeb",
+      "width" : null
+    } ],
+    "name" : "April 2022 | EimerTunes",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "NTYsMzM2NDRjN2QxZWVhMWJkNmQ4MmMzNzllODYwNzUxZWViYmYzMjg3NQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6EiJxnIZhhzfQWSOLJL1LL/tracks",
+      "total" : 49
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6EiJxnIZhhzfQWSOLJL1LL"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7JTRZBY8vzkN6FOpWd1RuZ"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7JTRZBY8vzkN6FOpWd1RuZ",
+    "id" : "7JTRZBY8vzkN6FOpWd1RuZ",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbbfff61a683883a16138b9e6d",
+      "width" : null
+    } ],
+    "name" : "März 2022 | EimerTunes ",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "OTAsY2MwMWQ3YmU5MTk0M2IzYzM0MjM2MWQyMmZhODBkZjM0MGRlYjVjZQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7JTRZBY8vzkN6FOpWd1RuZ/tracks",
+      "total" : 30
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7JTRZBY8vzkN6FOpWd1RuZ"
+  }, {
+    "collaborative" : false,
+    "description" : "Majestic casual best tracks: Kaytranada , Toro Y Moi,Pat Lok, Bondax , Mura Masa, Moon Boots, Snakehips, Flume, Masego",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1C7kzjKP2Ya0oFcxV5VcjK"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1C7kzjKP2Ya0oFcxV5VcjK",
+    "id" : "1C7kzjKP2Ya0oFcxV5VcjK",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb3b06f78d036d780964a95704",
+      "width" : null
+    } ],
+    "name" : "Majestic Casual✨best of ",
+    "owner" : {
+      "display_name" : "*Ludo",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/016iebgkaqm7k5bss9vvgpawp"
+      },
+      "href" : "https://api.spotify.com/v1/users/016iebgkaqm7k5bss9vvgpawp",
+      "id" : "016iebgkaqm7k5bss9vvgpawp",
+      "type" : "user",
+      "uri" : "spotify:user:016iebgkaqm7k5bss9vvgpawp"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NDcyLGNhMzJjMjE5NmZkNjhiOGFmNGNmNWU2NTY0YjU5ZTVjYjM4NjliNTk=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1C7kzjKP2Ya0oFcxV5VcjK/tracks",
+      "total" : 292
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1C7kzjKP2Ya0oFcxV5VcjK"
+  }, {
+    "collaborative" : false,
+    "description" : "The top 100 NUKG tracks, updated weekly with the best artists and tracks the scene has to offer",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1zVPOxxqXh4C2Y4ExX5Ghp"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1zVPOxxqXh4C2Y4ExX5Ghp",
+    "id" : "1zVPOxxqXh4C2Y4ExX5Ghp",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbc184bcaf3b985953d2fd94da",
+      "width" : null
+    } ],
+    "name" : " New UKG Bangers - Top 100 | Garage Shared",
+    "owner" : {
+      "display_name" : "FooR",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/gavinfoord"
+      },
+      "href" : "https://api.spotify.com/v1/users/gavinfoord",
+      "id" : "gavinfoord",
+      "type" : "user",
+      "uri" : "spotify:user:gavinfoord"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MjQ5MyxiZTA3ZGVkYWU0YzRmYmM2ZDgwYTY5ZmVhYmMwMzA5YWUyY2Y4N2Rk",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1zVPOxxqXh4C2Y4ExX5Ghp/tracks",
+      "total" : 102
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1zVPOxxqXh4C2Y4ExX5Ghp"
+  }, {
+    "collaborative" : false,
+    "description" : "The home of rave worthy melodic techno and house. Cover: Boris Brejcha",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DWSYVW0BVc4a3"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWSYVW0BVc4a3",
+    "id" : "37i9dQZF1DWSYVW0BVc4a3",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f00000003938e5bfb14e85c7da39b169d",
+      "width" : null
+    } ],
+    "name" : "Open Air",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY2OTkzNTY2MCwwMDAwMDAwMDFhOWE3MzdiMDkyNTE1NDk2N2MyYWJlM2VmNjc3ODk5",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWSYVW0BVc4a3/tracks",
+      "total" : 100
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DWSYVW0BVc4a3"
+  }, {
+    "collaborative" : false,
+    "description" : "All Toy Tonics releases in one playlist. Once a month we release a new EP (digital &amp; vinyl). On our Spotify RELEASE RADAR you can listen to all ...",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3Z1xLjFR89Zawh9e5zJrm7"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3Z1xLjFR89Zawh9e5zJrm7",
+    "id" : "3Z1xLjFR89Zawh9e5zJrm7",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb9d706b1e7553caf784e44fb9",
+      "width" : null
+    } ],
+    "name" : "Toy Tonics Radar",
+    "owner" : {
+      "display_name" : "Toy Tonics",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/toytonics"
+      },
+      "href" : "https://api.spotify.com/v1/users/toytonics",
+      "id" : "toytonics",
+      "type" : "user",
+      "uri" : "spotify:user:toytonics"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NDE1LDAzYjA2ZmI5YmIyMGEzMGRlODE4MjcxMzAzYWEwZDEwMGE4ODNjYTU=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3Z1xLjFR89Zawh9e5zJrm7/tracks",
+      "total" : 363
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3Z1xLjFR89Zawh9e5zJrm7"
+  }, {
+    "collaborative" : false,
+    "description" : "Top 100 House from Beatport, last update : 2022-10-15",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2uk6wTPxwrhgSAR66f4nBV"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2uk6wTPxwrhgSAR66f4nBV",
+    "id" : "2uk6wTPxwrhgSAR66f4nBV",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbaa22e577c843e9cfd66af995",
+      "width" : null
+    } ],
+    "name" : "Beatport - Top 100 House",
+    "owner" : {
+      "display_name" : "TopPlaylist",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/x2qvyvkdletqo037ji589lqh1"
+      },
+      "href" : "https://api.spotify.com/v1/users/x2qvyvkdletqo037ji589lqh1",
+      "id" : "x2qvyvkdletqo037ji589lqh1",
+      "type" : "user",
+      "uri" : "spotify:user:x2qvyvkdletqo037ji589lqh1"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NjI0MTYsNTM1MGMzYzFhMjMyYzExNGMwMzAxNjEyNjYyYzU1MTIwZDY3YmMwNQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2uk6wTPxwrhgSAR66f4nBV/tracks",
+      "total" : 99
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2uk6wTPxwrhgSAR66f4nBV"
+  }, {
+    "collaborative" : false,
+    "description" : "Top 100 Tech House from Beatport, last update : 2022-10-16",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4TlbEqdlablQV1ZBc7Wyg6"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4TlbEqdlablQV1ZBc7Wyg6",
+    "id" : "4TlbEqdlablQV1ZBc7Wyg6",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbc1cb797cf9fa481c275f061a",
+      "width" : null
+    } ],
+    "name" : "Beatport - Top 100 Tech House",
+    "owner" : {
+      "display_name" : "TopPlaylist",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/x2qvyvkdletqo037ji589lqh1"
+      },
+      "href" : "https://api.spotify.com/v1/users/x2qvyvkdletqo037ji589lqh1",
+      "id" : "x2qvyvkdletqo037ji589lqh1",
+      "type" : "user",
+      "uri" : "spotify:user:x2qvyvkdletqo037ji589lqh1"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NTk3ODIsMjY1MzYxZTViODY3OWFkMTFhZTkzNmQ5Y2ViYzQ1Y2Q2YjNiMWIxYw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4TlbEqdlablQV1ZBc7Wyg6/tracks",
+      "total" : 99
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4TlbEqdlablQV1ZBc7Wyg6"
+  }, {
+    "collaborative" : false,
+    "description" : "Top 100 Deep House from Beatport, last update : 2022-10-15",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5rsnPM0Zvujf8UygFu6Nny"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5rsnPM0Zvujf8UygFu6Nny",
+    "id" : "5rsnPM0Zvujf8UygFu6Nny",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebba8778ef67e8d460c13966f24",
+      "width" : null
+    } ],
+    "name" : "Beatport - Top 100 Deep House",
+    "owner" : {
+      "display_name" : "TopPlaylist",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/x2qvyvkdletqo037ji589lqh1"
+      },
+      "href" : "https://api.spotify.com/v1/users/x2qvyvkdletqo037ji589lqh1",
+      "id" : "x2qvyvkdletqo037ji589lqh1",
+      "type" : "user",
+      "uri" : "spotify:user:x2qvyvkdletqo037ji589lqh1"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NjgzOTksZmUyMmIxYjFlMjA4NzE0ODgxMDk5NjhiMzkzMDUzYjhlNDNkYjI0Mg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5rsnPM0Zvujf8UygFu6Nny/tracks",
+      "total" : 96
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5rsnPM0Zvujf8UygFu6Nny"
+  }, {
+    "collaborative" : false,
+    "description" : "Songs die mich in letzter Zeit inspiriert haben.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/010pkyRRJWYM2bALAodror"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/010pkyRRJWYM2bALAodror",
+    "id" : "010pkyRRJWYM2bALAodror",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbeb967fd8f080a7d7e0ff9c61",
+      "width" : null
+    } ],
+    "name" : "Inspiration",
+    "owner" : {
+      "display_name" : "Haller",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/bartinhody"
+      },
+      "href" : "https://api.spotify.com/v1/users/bartinhody",
+      "id" : "bartinhody",
+      "type" : "user",
+      "uri" : "spotify:user:bartinhody"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTU1LDNlMWJkNGY1ZWRmYzYyMDI1OWI1YzMwMjY1NjUwZDRhYjcyNTNmM2U=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/010pkyRRJWYM2bALAodror/tracks",
+      "total" : 15
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:010pkyRRJWYM2bALAodror"
+  }, {
+    "collaborative" : false,
+    "description" : "Submit: demos@rawsomerecordings.com | Follow us on IG @rawsomerecords @rawsomedeep @rawsomeltd",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4ghNHQmmrLPZJhoezYOEDq"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4ghNHQmmrLPZJhoezYOEDq",
+    "id" : "4ghNHQmmrLPZJhoezYOEDq",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbb0952f8662841a58cb6fa0d7",
+      "width" : null
+    } ],
+    "name" : "RAWSOME TECH HOUSE",
+    "owner" : {
+      "display_name" : "Greco",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/kz3yzdf2h6uad7amqcojccfbf"
+      },
+      "href" : "https://api.spotify.com/v1/users/kz3yzdf2h6uad7amqcojccfbf",
+      "id" : "kz3yzdf2h6uad7amqcojccfbf",
+      "type" : "user",
+      "uri" : "spotify:user:kz3yzdf2h6uad7amqcojccfbf"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "OTM5LDQzY2U4ZDhjNzAzZTkwNWIyMzBlNDRhN2ZkNTllYTg0Nzc1MzNiODM=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4ghNHQmmrLPZJhoezYOEDq/tracks",
+      "total" : 86
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4ghNHQmmrLPZJhoezYOEDq"
+  }, {
+    "collaborative" : false,
+    "description" : "YouTube channel with uk tech house, house, deep groove house, tech house, deep house, minimal tech house. Add any youtube channel or discogs label on www.mirror.fm #mirrorfm",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3NrVFjuuIF1NXftMgHbQoX"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3NrVFjuuIF1NXftMgHbQoX",
+    "id" : "3NrVFjuuIF1NXftMgHbQoX",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb35fe35e365c30ceafc9ecb1c",
+      "width" : null
+    } ],
+    "name" : "blanc",
+    "owner" : {
+      "display_name" : "Mirror.FM",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/xlqeojt6n7on0j7coh9go8ifd"
+      },
+      "href" : "https://api.spotify.com/v1/users/xlqeojt6n7on0j7coh9go8ifd",
+      "id" : "xlqeojt6n7on0j7coh9go8ifd",
+      "type" : "user",
+      "uri" : "spotify:user:xlqeojt6n7on0j7coh9go8ifd"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTUyOSw5NGVhNTk2MDgxN2ZhNjllNTcwNGU4NzczNGRiNTczZjY3NTc5MmQw",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3NrVFjuuIF1NXftMgHbQoX/tracks",
+      "total" : 1393
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3NrVFjuuIF1NXftMgHbQoX"
+  }, {
+    "collaborative" : false,
+    "description" : "A Deep selection, that gets updated weekly. For More info check <a href=\"https://open.spotify.com/artist/2IEiImmwPc8nXQZu4OHaAw\">Fman</a>, <a href=\"https://www.facebook.com/Salmiakrecordings/\">Facebook</a>",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6oSdweXblSL3faCcgcg0mx"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6oSdweXblSL3faCcgcg0mx",
+    "id" : "6oSdweXblSL3faCcgcg0mx",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb5172ffa832be5fb64772f762",
+      "width" : null
+    } ],
+    "name" : "DEEP SELECTION",
+    "owner" : {
+      "display_name" : "Funkerman",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/djfunkerman"
+      },
+      "href" : "https://api.spotify.com/v1/users/djfunkerman",
+      "id" : "djfunkerman",
+      "type" : "user",
+      "uri" : "spotify:user:djfunkerman"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjY4NCwzNjEzZmVlNTA1ZWJlMjI1MGM3YmRhOWY4YzgxYTk0NDhkNDFiN2Nk",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6oSdweXblSL3faCcgcg0mx/tracks",
+      "total" : 110
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6oSdweXblSL3faCcgcg0mx"
+  }, {
+    "collaborative" : false,
+    "description" : "A Selection of the freshest House Music, Emotional &amp; Soulful Jams. Updates every week. - Tech house | House | Deep | Minimal | Tech. My <a href=\"https://open.spotify.com/artist/7ljL11SRgjkdqO8NqjJBVU\">Spotify profile</a>",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3gOZuWFhWw6xP7kK0DplVL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3gOZuWFhWw6xP7kK0DplVL",
+    "id" : "3gOZuWFhWw6xP7kK0DplVL",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbb29f86fca00865f9a300a9ee",
+      "width" : null
+    } ],
+    "name" : "HOUSE SELECTION",
+    "owner" : {
+      "display_name" : "Funkerman",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/djfunkerman"
+      },
+      "href" : "https://api.spotify.com/v1/users/djfunkerman",
+      "id" : "djfunkerman",
+      "type" : "user",
+      "uri" : "spotify:user:djfunkerman"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Mzk0MSxiYmYzNDRiNTRlODNmM2Q0MmIxMDRkN2M4MGY1Yzg4NDllNzc5MjA0",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3gOZuWFhWw6xP7kK0DplVL/tracks",
+      "total" : 95
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3gOZuWFhWw6xP7kK0DplVL"
+  }, {
+    "collaborative" : false,
+    "description" : "Weekly updated gems we love to play and listen curated by Monkey Safari!",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5RrUsvxAgT9HyfhAEmecqi"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5RrUsvxAgT9HyfhAEmecqi",
+    "id" : "5RrUsvxAgT9HyfhAEmecqi",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb4db2e4eb8621ab5c99bd3b52",
+      "width" : null
+    } ],
+    "name" : "HOMMAGE FAMILY PLAYGROUND | Afro | Organic | Melodic | House",
+    "owner" : {
+      "display_name" : "Hommage",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/heavybody"
+      },
+      "href" : "https://api.spotify.com/v1/users/heavybody",
+      "id" : "heavybody",
+      "type" : "user",
+      "uri" : "spotify:user:heavybody"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NzUwLDcxYjRiZDQxN2I2OWQ4NzM5OWM0NzMxZDE4MzczNWJmMTY0ODhkZmQ=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5RrUsvxAgT9HyfhAEmecqi/tracks",
+      "total" : 264
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5RrUsvxAgT9HyfhAEmecqi"
+  }, {
+    "collaborative" : false,
+    "description" : "Submit: demos@rawsomerecordings.com | Follow us on IG @rawsomerecords @rawsomedeep @rawsomeltd",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6st828vey6lweVTKBhZWFa"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6st828vey6lweVTKBhZWFa",
+    "id" : "6st828vey6lweVTKBhZWFa",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebba621a489ab3ead5ebdd3868c",
+      "width" : null
+    } ],
+    "name" : "RAWSOME DEEP",
+    "owner" : {
+      "display_name" : "Greco",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/kz3yzdf2h6uad7amqcojccfbf"
+      },
+      "href" : "https://api.spotify.com/v1/users/kz3yzdf2h6uad7amqcojccfbf",
+      "id" : "kz3yzdf2h6uad7amqcojccfbf",
+      "type" : "user",
+      "uri" : "spotify:user:kz3yzdf2h6uad7amqcojccfbf"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NzQzLGJjNmEwN2Q4YTA0NWI3ZWM0MDAzMDNiODE1NWMwMTQ3YjFhYWM4Mzc=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6st828vey6lweVTKBhZWFa/tracks",
+      "total" : 158
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6st828vey6lweVTKBhZWFa"
+  }, {
+    "collaborative" : false,
+    "description" : "The world’s most listened to house music radio show. Full mixes available at <a href=\"https://defected.com/music/radio\">defected.com/music/radio</a>",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/08M2kTqmlPNHygrNfrZJuQ"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/08M2kTqmlPNHygrNfrZJuQ",
+    "id" : "08M2kTqmlPNHygrNfrZJuQ",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb33a9414ae6d67965b0b8ceee",
+      "width" : null
+    } ],
+    "name" : "Defected Radio",
+    "owner" : {
+      "display_name" : "Defected Records",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/defected.records"
+      },
+      "href" : "https://api.spotify.com/v1/users/defected.records",
+      "id" : "defected.records",
+      "type" : "user",
+      "uri" : "spotify:user:defected.records"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NDA1MixjYzY3MDkzNzBhZWQ2NDc0NDRhMTFlMGFhZDZmMTA0OGVjNjRjZjQ1",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/08M2kTqmlPNHygrNfrZJuQ/tracks",
+      "total" : 112
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:08M2kTqmlPNHygrNfrZJuQ"
+  }, {
+    "collaborative" : false,
+    "description" : "Club heat. Keep up-to-date ➜ <a href=\"https://www.instagram.com/dftdrecords/\">Instagram</a> | <a href=\"https://defected.com/store.html\">D-Store</a>",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7d9Ilx2o5XUpNeGLIKuQcn"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7d9Ilx2o5XUpNeGLIKuQcn",
+    "id" : "7d9Ilx2o5XUpNeGLIKuQcn",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbc8fb135754e2fccc6a47eea7",
+      "width" : null
+    } ],
+    "name" : "DFTD | Underground House",
+    "owner" : {
+      "display_name" : "Defected Records",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/defected.records"
+      },
+      "href" : "https://api.spotify.com/v1/users/defected.records",
+      "id" : "defected.records",
+      "type" : "user",
+      "uri" : "spotify:user:defected.records"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Mzc4Niw0ZjYxNDMwNGRhNTAxOTBlYzZjODJmZDE1YTBmMTVhN2Q2OTc0MjIw",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7d9Ilx2o5XUpNeGLIKuQcn/tracks",
+      "total" : 40
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7d9Ilx2o5XUpNeGLIKuQcn"
+  }, {
+    "collaborative" : false,
+    "description" : "Box Of Trax - a selection of what we think are the finest records on the planet!",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3p4Z0MYcp6W7P8C5Lb58t0"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3p4Z0MYcp6W7P8C5Lb58t0",
+    "id" : "3p4Z0MYcp6W7P8C5Lb58t0",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb7449acdc6ee21d8c97320e8c",
+      "width" : null
+    } ],
+    "name" : "Box Of Cats - Box Of Trax",
+    "owner" : {
+      "display_name" : "boxofcatsmusic",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/8mlbpka6aoa0tl6rmcjlxfahm"
+      },
+      "href" : "https://api.spotify.com/v1/users/8mlbpka6aoa0tl6rmcjlxfahm",
+      "id" : "8mlbpka6aoa0tl6rmcjlxfahm",
+      "type" : "user",
+      "uri" : "spotify:user:8mlbpka6aoa0tl6rmcjlxfahm"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjYyNixhYWEzNjk2Mjk4YzQ0Yjc0Njg1MmI0NjE1MDBmNDBiYWI3ZjVkZGQ4",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3p4Z0MYcp6W7P8C5Lb58t0/tracks",
+      "total" : 177
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3p4Z0MYcp6W7P8C5Lb58t0"
+  }, {
+    "collaborative" : false,
+    "description" : "Let's go back to that club sound.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DWYtsMR1ehsyI"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWYtsMR1ehsyI",
+    "id" : "37i9dQZF1DWYtsMR1ehsyI",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f000000036622607dddb0e511dfc18048",
+      "width" : null
+    } ],
+    "name" : "Club Dance Reunion",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY2OTA0MDM0NiwwMDAwMDAwMGY3ZjQzYzI5MTczNjIxM2E3ZTBkYjBlMWJiM2Y5Yjg3",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWYtsMR1ehsyI/tracks",
+      "total" : 90
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DWYtsMR1ehsyI"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1E4Frm1MfzbcUs"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1E4Frm1MfzbcUs",
+    "id" : "37i9dQZF1E4Frm1MfzbcUs",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://seeded-session-images.scdn.co/v1/img/artist/6eNGoUHSDYfXSy5SvnN1Uu/en",
+      "width" : null
+    } ],
+    "name" : "George Moir Radio",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY3MDQ0ODk1OSwwMDAwMDAwMDc0Y2Q3Njk0ZGY2NDFkMWNlYjI4YzNkZDFkM2UyMzJj",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1E4Frm1MfzbcUs/tracks",
+      "total" : 50
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1E4Frm1MfzbcUs"
+  }, {
+    "collaborative" : false,
+    "description" : "Feed your eardrums some wholewheat organic soundwaves.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5LwpiqA4khXZyLUwhlP9FM"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5LwpiqA4khXZyLUwhlP9FM",
+    "id" : "5LwpiqA4khXZyLUwhlP9FM",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebbb33897df599a031f334de06b",
+      "width" : null
+    } ],
+    "name" : "Cur(ator)ious George",
+    "owner" : {
+      "display_name" : "Jeremy Broad",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/broadgambolds"
+      },
+      "href" : "https://api.spotify.com/v1/users/broadgambolds",
+      "id" : "broadgambolds",
+      "type" : "user",
+      "uri" : "spotify:user:broadgambolds"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTg0LDA5MGUxNzI2OGExN2IwNjc2NDhkNDFlYzJjNDU0YzI2OTc3NWIxOGU=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5LwpiqA4khXZyLUwhlP9FM/tracks",
+      "total" : 88
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5LwpiqA4khXZyLUwhlP9FM"
+  }, {
+    "collaborative" : false,
+    "description" : "Aus gegebenem Anlass (Mein erstes Album UNIVERSUM REGELT ist draußen!!!) ist Niemand&#x27;s Playlist diesmal einfach nur mein Album plus ein paar der most influential Songs meines Lebens (minus jazz und klassik... klang im mix einfach scheiße).",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2E7k2TEkj1r7WKhIw8NjjL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2E7k2TEkj1r7WKhIw8NjjL",
+    "id" : "2E7k2TEkj1r7WKhIw8NjjL",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb49fa02077edbc1766545e8c8",
+      "width" : null
+    } ],
+    "name" : "Niemands Playliste",
+    "owner" : {
+      "display_name" : "Schmyt",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/2pr4a4ae25gyydmgww8cqd9cl"
+      },
+      "href" : "https://api.spotify.com/v1/users/2pr4a4ae25gyydmgww8cqd9cl",
+      "id" : "2pr4a4ae25gyydmgww8cqd9cl",
+      "type" : "user",
+      "uri" : "spotify:user:2pr4a4ae25gyydmgww8cqd9cl"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NTc3LDdiNDVmYmQ3NTMwNDA2M2VhOGI2ZTBlMmZkNzI1Y2M2ODI4MmVjNmY=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2E7k2TEkj1r7WKhIw8NjjL/tracks",
+      "total" : 39
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2E7k2TEkj1r7WKhIw8NjjL"
+  }, {
+    "collaborative" : false,
+    "description" : "<a href=\"https://www.instagram.com/allesbackspin/\">@allesbackspin</a>. Die Deutschrap-Playlist. Cover: Haftbefehl",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/531gtG63RwBSjuxb7XDGPL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/531gtG63RwBSjuxb7XDGPL",
+    "id" : "531gtG63RwBSjuxb7XDGPL",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebb4bf8cf8a8b96c7dc90a2a0e9",
+      "width" : null
+    } ],
+    "name" : "Thank BACKSPIN, it's Friday",
+    "owner" : {
+      "display_name" : "BACKSPIN",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/lfj2gefxpkgnp5hiiowfly9vq"
+      },
+      "href" : "https://api.spotify.com/v1/users/lfj2gefxpkgnp5hiiowfly9vq",
+      "id" : "lfj2gefxpkgnp5hiiowfly9vq",
+      "type" : "user",
+      "uri" : "spotify:user:lfj2gefxpkgnp5hiiowfly9vq"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTQ3MTQsODhiODlmNjg1MjBlODRkOGY3YTI3N2RjNTkwYjdiMTIzOWRmMzJjZg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/531gtG63RwBSjuxb7XDGPL/tracks",
+      "total" : 65
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:531gtG63RwBSjuxb7XDGPL"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1UvHfx8aYCGLW6jDhSvA77"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1UvHfx8aYCGLW6jDhSvA77",
+    "id" : "1UvHfx8aYCGLW6jDhSvA77",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27380bf50f36179c3e3542ffa9f",
+      "width" : 640
+    } ],
+    "name" : "Irgendwann mal Techno ",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NCw2OWJlODU3MjMzNDk2ZmRlMzI5OTIwODJiYzdjYTQ2ZGJjYjE4Zjhk",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1UvHfx8aYCGLW6jDhSvA77/tracks",
+      "total" : 3
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1UvHfx8aYCGLW6jDhSvA77"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2hI1kqkQfNUicHHrb4olVw"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2hI1kqkQfNUicHHrb4olVw",
+    "id" : "2hI1kqkQfNUicHHrb4olVw",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2731bea3dda9bcbfad03318495eab67616d0000b273299cb0a6cf5f3fd3bc7aa171ab67616d0000b27336b5b794d5aec21d1d4dd0efab67616d0000b2735440230a3bd8cbfae688953f",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2731bea3dda9bcbfad03318495eab67616d0000b273299cb0a6cf5f3fd3bc7aa171ab67616d0000b27336b5b794d5aec21d1d4dd0efab67616d0000b2735440230a3bd8cbfae688953f",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2731bea3dda9bcbfad03318495eab67616d0000b273299cb0a6cf5f3fd3bc7aa171ab67616d0000b27336b5b794d5aec21d1d4dd0efab67616d0000b2735440230a3bd8cbfae688953f",
+      "width" : 60
+    } ],
+    "name" : "Garagenparty",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTEsYTU1M2YzZmJlN2E2M2EzMGVkODdlM2JmMzBlZjIzYTVhMjNmMDkxZg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2hI1kqkQfNUicHHrb4olVw/tracks",
+      "total" : 9
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2hI1kqkQfNUicHHrb4olVw"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1QKoRIXJCix82RebfafTPD"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1QKoRIXJCix82RebfafTPD",
+    "id" : "1QKoRIXJCix82RebfafTPD",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/7a271343957febdf0a7797db51b2f251271cf6c2ab67616d0000b273080cea2226f8ea1672cc32ecab67616d0000b27357ff5ecf3b15f6e9c5f21ea6ab67616d0000b273f869f3bf2c687c510bc8ea21",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/7a271343957febdf0a7797db51b2f251271cf6c2ab67616d0000b273080cea2226f8ea1672cc32ecab67616d0000b27357ff5ecf3b15f6e9c5f21ea6ab67616d0000b273f869f3bf2c687c510bc8ea21",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/7a271343957febdf0a7797db51b2f251271cf6c2ab67616d0000b273080cea2226f8ea1672cc32ecab67616d0000b27357ff5ecf3b15f6e9c5f21ea6ab67616d0000b273f869f3bf2c687c510bc8ea21",
+      "width" : 60
+    } ],
+    "name" : "How to end a Set",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Nyw5OWViOTJmZTk3YTUxNmMxYWUxNGYyZjMxZGY2MzA5YzZhZTgxM2My",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1QKoRIXJCix82RebfafTPD/tracks",
+      "total" : 5
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1QKoRIXJCix82RebfafTPD"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2CTBhtGMYPMsIOK356hFDc"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2CTBhtGMYPMsIOK356hFDc",
+    "id" : "2CTBhtGMYPMsIOK356hFDc",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2732893b64589183832a8414eddab67616d0000b2737f83186743b5e290caca97f5ab67616d0000b273b0aa3acff1807cd9e7b9c71aab67616d0000b273c95743f0a5cb08dd4de28f72",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2732893b64589183832a8414eddab67616d0000b2737f83186743b5e290caca97f5ab67616d0000b273b0aa3acff1807cd9e7b9c71aab67616d0000b273c95743f0a5cb08dd4de28f72",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2732893b64589183832a8414eddab67616d0000b2737f83186743b5e290caca97f5ab67616d0000b273b0aa3acff1807cd9e7b9c71aab67616d0000b273c95743f0a5cb08dd4de28f72",
+      "width" : 60
+    } ],
+    "name" : "Arg viel härter wird’s nicht",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Niw2OWQzZmVkODE2OTA2M2U4MDQ1Nzc4YTAxNTgzZTUxZmI2NDYyYjFi",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2CTBhtGMYPMsIOK356hFDc/tracks",
+      "total" : 5
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2CTBhtGMYPMsIOK356hFDc"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7H3Bir3tmh0qkxwQPQ0r5H"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7H3Bir3tmh0qkxwQPQ0r5H",
+    "id" : "7H3Bir3tmh0qkxwQPQ0r5H",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2737a61e0d026faa186a8d294e7ab67616d0000b2738da1f8135b9ddc3f4925958bab67616d0000b273cd713020ad2e2297805555e5",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2737a61e0d026faa186a8d294e7ab67616d0000b2738da1f8135b9ddc3f4925958bab67616d0000b273cd713020ad2e2297805555e5",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2737a61e0d026faa186a8d294e7ab67616d0000b2738da1f8135b9ddc3f4925958bab67616d0000b273cd713020ad2e2297805555e5",
+      "width" : 60
+    } ],
+    "name" : "Gute Laune nach Vorne! ",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTgsYWQyM2M0NDlhZDU5MGEwYjYwY2M4NzQ2ODIzYWFlNjNlZGFjOTQ3Yw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7H3Bir3tmh0qkxwQPQ0r5H/tracks",
+      "total" : 14
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7H3Bir3tmh0qkxwQPQ0r5H"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1Tcwal3GdKWlYiwWmqWw8u"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1Tcwal3GdKWlYiwWmqWw8u",
+    "id" : "1Tcwal3GdKWlYiwWmqWw8u",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2738fcbe2f4c9b20e82d16e80b4ab67616d0000b2739b216367554e85b2149a4ac8ab67616d0000b273edcb8a8a7efd4d386d1f1032",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2738fcbe2f4c9b20e82d16e80b4ab67616d0000b2739b216367554e85b2149a4ac8ab67616d0000b273edcb8a8a7efd4d386d1f1032",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2736a609200553087bc4f511af4ab67616d0000b2738fcbe2f4c9b20e82d16e80b4ab67616d0000b2739b216367554e85b2149a4ac8ab67616d0000b273edcb8a8a7efd4d386d1f1032",
+      "width" : 60
+    } ],
+    "name" : "Schiebt anders",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NjAsNTA4OWY4NTMwYmI2OGEwYWQyMzljMmNkNjY1YjhmOTE0MDY0NGQxNw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1Tcwal3GdKWlYiwWmqWw8u/tracks",
+      "total" : 53
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1Tcwal3GdKWlYiwWmqWw8u"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0aXE1HaFo9J4yUevGeBS7x"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0aXE1HaFo9J4yUevGeBS7x",
+    "id" : "0aXE1HaFo9J4yUevGeBS7x",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273cbb7e0d806759b7e6aee59bcab67616d0000b273eb5e4e154cd4092c957cc284",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273cbb7e0d806759b7e6aee59bcab67616d0000b273eb5e4e154cd4092c957cc284",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273cbb7e0d806759b7e6aee59bcab67616d0000b273eb5e4e154cd4092c957cc284",
+      "width" : 60
+    } ],
+    "name" : "Hausi vergessen",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTIyLDE4YWEyYjY4YTZjZGE1YWJkZTc2MzA4ZTEwZjAzMzgxMzhjYTVkN2U=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0aXE1HaFo9J4yUevGeBS7x/tracks",
+      "total" : 112
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0aXE1HaFo9J4yUevGeBS7x"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6e1TjVUlpRW2pwO8uEWDhX"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6e1TjVUlpRW2pwO8uEWDhX",
+    "id" : "6e1TjVUlpRW2pwO8uEWDhX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b2739e0ebbc0f89a9e07cfdfb3daab67616d0000b2739e6b733ec7f5450628031d48ab67616d0000b273e8916cb3e2a585b53c4cace0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b2739e0ebbc0f89a9e07cfdfb3daab67616d0000b2739e6b733ec7f5450628031d48ab67616d0000b273e8916cb3e2a585b53c4cace0",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2735fbe8daaead440782104cff1ab67616d0000b2739e0ebbc0f89a9e07cfdfb3daab67616d0000b2739e6b733ec7f5450628031d48ab67616d0000b273e8916cb3e2a585b53c4cace0",
+      "width" : 60
+    } ],
+    "name" : "Der fliegende Holländer",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTgsMDlmMzY2NzhkNmE2ZWUyOGRiN2RjMDljYTc3NWRmZjJmNmVkMTAwYQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6e1TjVUlpRW2pwO8uEWDhX/tracks",
+      "total" : 14
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6e1TjVUlpRW2pwO8uEWDhX"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5iNoge0rZbhQhSsXV76z7r"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5iNoge0rZbhQhSsXV76z7r",
+    "id" : "5iNoge0rZbhQhSsXV76z7r",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b27375affb9372b6e82c1bf9f83cab67616d0000b273bfe913f00c4b948376dba12fab67616d0000b273e62762bd6cf0e3e58311444aab67616d0000b273faa8ee2d863520ed6c4c223e",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b27375affb9372b6e82c1bf9f83cab67616d0000b273bfe913f00c4b948376dba12fab67616d0000b273e62762bd6cf0e3e58311444aab67616d0000b273faa8ee2d863520ed6c4c223e",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b27375affb9372b6e82c1bf9f83cab67616d0000b273bfe913f00c4b948376dba12fab67616d0000b273e62762bd6cf0e3e58311444aab67616d0000b273faa8ee2d863520ed6c4c223e",
+      "width" : 60
+    } ],
+    "name" : "Tauben fliegen tief",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTEsMmQ4NmNlMjMyMDc1ZWRmNGIwOGI2Nzg0OWZlNjA0ODNmOWZhNTkzYQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5iNoge0rZbhQhSsXV76z7r/tracks",
+      "total" : 9
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5iNoge0rZbhQhSsXV76z7r"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4lqcYCYtLM9IWnrFqxb9oh"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4lqcYCYtLM9IWnrFqxb9oh",
+    "id" : "4lqcYCYtLM9IWnrFqxb9oh",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2730a6be67f9e44e9c160531e85ab67616d0000b273614f07fefe5205814727addaab67616d0000b2739870a7b0fdc911da5c68daa8ab67616d0000b273c006773ac9c5d4ae6a21ace9",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2730a6be67f9e44e9c160531e85ab67616d0000b273614f07fefe5205814727addaab67616d0000b2739870a7b0fdc911da5c68daa8ab67616d0000b273c006773ac9c5d4ae6a21ace9",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2730a6be67f9e44e9c160531e85ab67616d0000b273614f07fefe5205814727addaab67616d0000b2739870a7b0fdc911da5c68daa8ab67616d0000b273c006773ac9c5d4ae6a21ace9",
+      "width" : 60
+    } ],
+    "name" : "Kulturgarten",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjIsZDk2MzFjYjlkZTE4YTI5OGZkM2U0ZGJjMTczZmZhOWFjZTAyNjg2Zg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4lqcYCYtLM9IWnrFqxb9oh/tracks",
+      "total" : 21
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4lqcYCYtLM9IWnrFqxb9oh"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6mo6bKhbxklNreV8An8LPk"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6mo6bKhbxklNreV8An8LPk",
+    "id" : "6mo6bKhbxklNreV8An8LPk",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2736dfa34891872e0b32d31ba55ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273c29b2efd548bc478e93dcc4cab67616d0000b273db3ad36919ecbfbf7c669708",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2736dfa34891872e0b32d31ba55ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273c29b2efd548bc478e93dcc4cab67616d0000b273db3ad36919ecbfbf7c669708",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2736dfa34891872e0b32d31ba55ab67616d0000b273b1351acdabc3876cdacdacf7ab67616d0000b273c29b2efd548bc478e93dcc4cab67616d0000b273db3ad36919ecbfbf7c669708",
+      "width" : 60
+    } ],
+    "name" : "Rosé Olé",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MzAsNDJmMTFlMzIwOWY5YzZmNTdjY2Q0MDEzZjlmZmI4NmZmYzg5YmEyZQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6mo6bKhbxklNreV8An8LPk/tracks",
+      "total" : 28
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6mo6bKhbxklNreV8An8LPk"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1zbxq8WcQIjOpuja6VrPGj"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1zbxq8WcQIjOpuja6VrPGj",
+    "id" : "1zbxq8WcQIjOpuja6VrPGj",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2734bedfde26ec005cdb146da35ab67616d0000b2737812af7d2fa81da29fd43915ab67616d0000b273870a069a40e7cce14339660fab67616d0000b273f8064e5a99a9ab85e54c5a87",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2734bedfde26ec005cdb146da35ab67616d0000b2737812af7d2fa81da29fd43915ab67616d0000b273870a069a40e7cce14339660fab67616d0000b273f8064e5a99a9ab85e54c5a87",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2734bedfde26ec005cdb146da35ab67616d0000b2737812af7d2fa81da29fd43915ab67616d0000b273870a069a40e7cce14339660fab67616d0000b273f8064e5a99a9ab85e54c5a87",
+      "width" : 60
+    } ],
+    "name" : "If I ever sundown again",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MzgsYTM0YzY3NmNlOWM3YmQ1NzZmZGYyOGRkMDJlMGNjYmQxNGU0NTIyZA==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1zbxq8WcQIjOpuja6VrPGj/tracks",
+      "total" : 35
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1zbxq8WcQIjOpuja6VrPGj"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7m71pBBJl9zB96pQphbxnp"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7m71pBBJl9zB96pQphbxnp",
+    "id" : "7m71pBBJl9zB96pQphbxnp",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2733fe577c6e73c25f3f32ed72dab67616d0000b2734f2d7a75a2d44ca38fcb0956ab67616d0000b2736491e3933bdfff3bc3f3c550ab67616d0000b273ef484a81c47476d48385c988",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2733fe577c6e73c25f3f32ed72dab67616d0000b2734f2d7a75a2d44ca38fcb0956ab67616d0000b2736491e3933bdfff3bc3f3c550ab67616d0000b273ef484a81c47476d48385c988",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2733fe577c6e73c25f3f32ed72dab67616d0000b2734f2d7a75a2d44ca38fcb0956ab67616d0000b2736491e3933bdfff3bc3f3c550ab67616d0000b273ef484a81c47476d48385c988",
+      "width" : 60
+    } ],
+    "name" : "Create some Groove",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjcsN2I3MGU3MjA4M2NlNDUzZjQwOTdkNzJiMTE3YTg3MDk4YmQwYzYzMQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7m71pBBJl9zB96pQphbxnp/tracks",
+      "total" : 26
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7m71pBBJl9zB96pQphbxnp"
+  }, {
+    "collaborative" : false,
+    "description" : "The Best New Electronic Music - updated weekly by @sofractures &#x2F;&#x2F; Nu Rave, lo-fi house, future garage, electronic, electronica, Uk funky, ukg",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/6isoH65GLBFtBhKsMnrwsR"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/6isoH65GLBFtBhKsMnrwsR",
+    "id" : "6isoH65GLBFtBhKsMnrwsR",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706c0000bebba433e052fde4d457f3075959",
+      "width" : null
+    } ],
+    "name" : "WHERE I’M @",
+    "owner" : {
+      "display_name" : "soundoffractures",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/soundoffractures"
+      },
+      "href" : "https://api.spotify.com/v1/users/soundoffractures",
+      "id" : "soundoffractures",
+      "type" : "user",
+      "uri" : "spotify:user:soundoffractures"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTQxOSw4ZGQ3NWIyM2YwMzI1ZGMwYmRiYWU2YjI2MmI2NDg5MmQ0YjBmMGI5",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/6isoH65GLBFtBhKsMnrwsR/tracks",
+      "total" : 295
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:6isoH65GLBFtBhKsMnrwsR"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4ZOHsa5q8agDlg4Oy44RBO"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4ZOHsa5q8agDlg4Oy44RBO",
+    "id" : "4ZOHsa5q8agDlg4Oy44RBO",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b2734e26a36b2335d93d855f453d",
+      "width" : 640
+    } ],
+    "name" : "Reference Tracks",
+    "owner" : {
+      "display_name" : "eimerreis",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/eimerreis"
+      },
+      "href" : "https://api.spotify.com/v1/users/eimerreis",
+      "id" : "eimerreis",
+      "type" : "user",
+      "uri" : "spotify:user:eimerreis"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Miw0ZGMzMjg4MjU0NmRhNTg5ZDQ3MzU5OGRhM2ZkNTRiMGE2NzIwMTQx",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4ZOHsa5q8agDlg4Oy44RBO/tracks",
+      "total" : 1
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4ZOHsa5q8agDlg4Oy44RBO"
+  } ],
+  "limit" : 50,
+  "next" : "https://api.spotify.com/v1/users/eimerreis/playlists?offset=50&limit=50",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 100
+}
