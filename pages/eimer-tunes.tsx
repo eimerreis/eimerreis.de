@@ -15,8 +15,8 @@ export const LinkInBio: NextPage<{ playlists: Playlists }> = ({
 }) => {
   return (
     <Layout>
-      <SEO title={``} description={``} />
-      <Header />
+      <SEO title={`EimerTunes | eimerreis.de`} description={`Monthly spotify playlists curated by eimerreis`} />
+      <Header name="eimerreis" />
       <div className="pt-4 pb-12">
         <h1 className="w-full font-bold opacity-80 text-center text-3xl">EimerTunes</h1>
         <h3 className="w-full text-center text-xl py-2">
