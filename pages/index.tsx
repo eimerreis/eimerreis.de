@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getPosts } from '../utils/mdx-utils';
+import PlausibleProvider from 'next-plausible';
 
 import Header from '../components/Header';
 import ArrowIcon from '../components/ArrowIcon';
@@ -8,7 +9,7 @@ import SEO from '../components/SEO';
 
 export default function Index({ posts, globalData }) {
   return (
-    <>
+    <PlausibleProvider domain="eimerreis.de">
       <SEO title={globalData.name} description={globalData.blogTitle} />
       <Header name={globalData.name} />
       <main className="w-full">
@@ -45,7 +46,7 @@ export default function Index({ posts, globalData }) {
           ))}
         </ul>
       </main>
-    </>
+    </PlausibleProvider>
   );
 }
 
