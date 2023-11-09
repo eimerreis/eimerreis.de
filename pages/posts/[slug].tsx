@@ -1,11 +1,17 @@
 import { getGlobalData } from '../../utils/global-data';
 // core styles shared by all of react-notion-x (required)
 import { Code } from 'react-notion-x/build/third-party/code';
+import { Collection } from 'react-notion-x/build/third-party/collection';
 import { Equation } from 'react-notion-x/build/third-party/equation';
 import { Modal } from 'react-notion-x/build/third-party/modal';
 import { Pdf } from 'react-notion-x/build/third-party/pdf';
 
-import { postFilePaths } from '../../utils/mdx-utils';
+import {
+  getNextPostBySlug,
+  getPostBySlug,
+  getPreviousPostBySlug,
+  postFilePaths,
+} from '../../utils/mdx-utils';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -15,23 +21,35 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import Layout, { GradientBackground } from '../../components/Layout';
 import SEO from '../../components/SEO';
-import { filterRelevantPages, getDatabase, sortByPublishDate } from '../../lib/notion/getDatabase';
+import { filterRelevantPages, getDatabase } from '../../lib/notion/getDatabase';
 import { NotionRenderer } from 'react-notion-x';
 import { NotionAPI } from 'notion-client';
 import { ThemeContext } from '../../components/ThemeContext';
 import React from 'react';
 
-export default function PostPage({ source, page, prevPost, nextPost, globalData }) {
+export default function PostPage({
+  source,
+  page,
+  frontMatter,
+  prevPost,
+  nextPost,
+  globalData,
+}) {
   // Set the value received from the local storage to a local state
   const theme = React.useContext(ThemeContext);
 
   return (
     <>
-      <SEO title={`${page.title} - ${globalData.name}`} description={page.title} />
+      <SEO
+        title={`${page.title} - ${globalData.name}`}
+        description={page.title}
+      />
       <Header name={globalData.name} />
       <article>
         <header>
-          <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">{page.title}</h1>
+          <h1 className="text-3xl md:text-5xl dark:text-white text-center mb-12">
+            {page.title}
+          </h1>
         </header>
         <main>
           <article className="prose dark:prose-dark">
@@ -46,6 +64,7 @@ export default function PostPage({ source, page, prevPost, nextPost, globalData 
                 Pdf,
               }}
             />
+            {/* <MDXRemote {...source} components={components} /> */}
           </article>
         </main>
         <div className="grid md:grid-cols-2 lg:-mx-24 mt-12">
@@ -75,40 +94,48 @@ export default function PostPage({ source, page, prevPost, nextPost, globalData 
 
 export const getStaticProps = async ({ params }) => {
   const globalData = getGlobalData();
-  const posts = (await getDatabase(process.env.NOTION_DATABASE_ID)).filter(filterRelevantPages).sort(sortByPublishDate);
-
-  const index = posts.findIndex((x) => x.slug === params.slug);
-
-  const page = posts[index];
+  const page = (await getDatabase(process.env.NOTION_DATABASE_ID)).find(
+    (x) => x.slug === params.slug
+  );
   const notionApi = new NotionAPI({
     activeUser: process.env.NOTION_USER_ID,
     authToken: process.env.NOTION_TOKEN_V2,
   });
   const recordMap = await notionApi.getPage(page.id);
 
-  const prevPost = index === posts.length - 1 ? null : posts[index + 1];
-  const nextPost = index === 0 ? null : posts[index - 1];
+  // const { mdxSource, data } = await getPostBySlug(params.slug);
+  // const prevPost = getPreviousPostBySlug(params.slug);
+  // const nextPost = getNextPostBySlug(params.slug);
 
   return {
     props: {
       globalData,
       page: page,
       source: recordMap,
-      prevPost,
-      nextPost
+      // frontMatter: data,
     },
   };
 };
 
 export const getStaticPaths = async () => {
-  const notionPages = (await getDatabase(process.env.NOTION_DATABASE_ID)).filter(filterRelevantPages).map((page) => ({
-    params: { slug: page.slug },
-  }));
+  const notionPages = (await getDatabase(process.env.NOTION_DATABASE_ID))
+    .filter(filterRelevantPages)
+    .map((page) => ({
+      params: { slug: page.slug },
+    }));
 
-  notionPages.forEach((path) => console.log(`Notion --- 📄 ${path.params.slug} 📄`));
+  notionPages.forEach((path) =>
+    console.log(`Notion --- 📄 ${path.params.slug} 📄`)
+  );
+
+  const paths = postFilePaths
+    // Remove file extensions for page paths
+    .map((path) => path.replace(/\.mdx?$/, ''))
+    // Map the path into the static paths object required by Next.js
+    .map((slug) => ({ params: { slug } }));
 
   return {
-    paths: [...notionPages],
+    paths: [...paths, ...notionPages],
     fallback: false,
   };
 };
