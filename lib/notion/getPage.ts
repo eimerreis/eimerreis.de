@@ -4,15 +4,14 @@ import {
   TitlePropertyItemObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import { notionClient } from './notionClient';
+import { NotionBlock, NotionPage } from './types';
 
 export const getPage = async (pageId: string) => {
   const response = await notionClient.pages.retrieve({ page_id: pageId });
   return response;
 };
 
-export const getFlatNotionPage = async (
-  pageId: string
-): Promise<NotionPage> => {
+export const getFlatNotionPage = async (pageId: string): Promise<NotionPage> => {
   const page = (await notionClient.pages.retrieve({
     page_id: pageId,
   })) as PageObjectResponse;
@@ -24,9 +23,7 @@ export const getFlatNotionPage = async (
 
 export const extractTitle = (page: PageObjectResponse): string => {
   // Assuming the title is in the first text block
-  const titleBlock = (
-    page.properties.Name as unknown as TitlePropertyItemObjectResponse
-  ).title[0];
+  const titleBlock = (page.properties.Name as unknown as TitlePropertyItemObjectResponse).title[0];
   return titleBlock ? titleBlock.plain_text : 'No Title';
 };
 
