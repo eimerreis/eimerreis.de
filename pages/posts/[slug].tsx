@@ -107,14 +107,8 @@ export const getStaticPaths = async () => {
 
   notionPages.forEach((path) => console.log(`Notion --- 📄 ${path.params.slug} 📄`));
 
-  const paths = postFilePaths
-    // Remove file extensions for page paths
-    .map((path) => path.replace(/\.mdx?$/, ''))
-    // Map the path into the static paths object required by Next.js
-    .map((slug) => ({ params: { slug } }));
-
   return {
-    paths: [...paths, ...notionPages],
+    paths: [...notionPages],
     fallback: false,
   };
 };
