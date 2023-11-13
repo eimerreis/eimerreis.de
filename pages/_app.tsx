@@ -1,6 +1,6 @@
+import 'prismjs/themes/prism-tomorrow.css';
 import '../styles/globals.css';
 
-import 'prismjs/themes/prism-tomorrow.css';
 
 import Footer from '../components/Footer';
 import Layout, { GradientBackground } from '../components/Layout';
