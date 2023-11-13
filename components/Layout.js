@@ -56,7 +56,7 @@ export default function Layout({ children }) {
   return (
     <div className="relative pb-24 overflow-hidden">
       <ThemeContext.Provider value={theme}>
-        <div className="p-4 max-w-2xl w-full mx-auto">{children}</div>
+        <div className="p-4 max-w-4xl w-full mx-auto">{children}</div>
       </ThemeContext.Provider>
     </div>
   );
