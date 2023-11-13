@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Layout.module.css';
+import { ThemeContext } from './ThemeContext';
 
 export function GradientBackground({ variant, className }) {
   const classes = classNames(
@@ -15,13 +16,16 @@ export function GradientBackground({ variant, className }) {
 }
 
 export default function Layout({ children }) {
+  const [theme, setTheme] = useState();
   const setAppTheme = () => {
     const darkMode = localStorage.getItem('theme') === 'dark';
     const lightMode = localStorage.getItem('theme') === 'light';
 
     if (darkMode) {
+      setTheme('light');
       document.documentElement.classList.add('dark');
     } else if (lightMode) {
+      setTheme('dark');
       document.documentElement.classList.remove('dark');
     }
     return;
@@ -51,9 +55,9 @@ export default function Layout({ children }) {
 
   return (
     <div className="relative pb-24 overflow-hidden">
-      <div className="p-4 max-w-2xl w-full mx-auto">
-        {children}
-      </div>
+      <ThemeContext.Provider value={theme}>
+        <div className="p-4 max-w-4xl w-full mx-auto">{children}</div>
+      </ThemeContext.Provider>
     </div>
   );
 }
