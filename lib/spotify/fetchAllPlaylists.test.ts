@@ -1,9 +1,43 @@
-import { createSpotifyClient } from "./createSpotifyClient"
-import { fetchAllPlaylists } from "./fetchAllPlaylists";
+import { fetchAllPlaylists } from './fetchAllPlaylists';
 
+const originalFetch = global.fetch;
 
-it("should fetch all playlists of the user", async () => {
-    const client = await createSpotifyClient("clientId", "clientSecret");
-    const playlists = await fetchAllPlaylists(client, "userId")
-    expect(playlists.length).toBe(100);
-})
+describe('fetchAllPlaylists', () => {
+  afterEach(() => {
+    global.fetch = originalFetch;
+  });
+
+  it('filters playlists to EimerTunes entries', async () => {
+    global.fetch = jest
+      .fn()
+      .mockResolvedValueOnce({
+        ok: true,
+        json: async () => ({
+          total: 2,
+          items: [
+            {
+              id: '1',
+              name: 'EimerTunes 01',
+              description: 'desc',
+              external_urls: { spotify: 'https://open.spotify.com/playlist/1' },
+              images: [{ url: 'https://i.scdn.co/image/1' }],
+              tracks: { total: 12 }
+            },
+            {
+              id: '2',
+              name: 'Other Playlist',
+              description: 'desc',
+              external_urls: { spotify: 'https://open.spotify.com/playlist/2' },
+              images: [{ url: 'https://i.scdn.co/image/2' }],
+              tracks: { total: 20 }
+            }
+          ]
+        })
+      } as Response);
+
+    const playlists = await fetchAllPlaylists({ accessToken: 'token' });
+
+    expect(playlists).toHaveLength(1);
+    expect(playlists[0].name).toBe('EimerTunes 01');
+  });
+});

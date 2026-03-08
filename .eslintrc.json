@@ -1,3 +1,4 @@
 {
-  "extends": ["next/core-web-vitals", "prettier"]
+  "extends": ["next/core-web-vitals"],
+  "ignorePatterns": ["tailwind-plus-commit/**", ".next/**", "commit.zip"]
 }
