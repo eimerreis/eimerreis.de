@@ -1,8 +1,29 @@
-import 'jest';
-
 import { createSpotifyClient } from './createSpotifyClient';
 
-it('should create a spotify client and return it', async () => {
-  const client = await createSpotifyClient("clientId", "clientSecret");
-  expect(client).toBeDefined();
+const originalEnv = process.env;
+const originalFetch = global.fetch;
+
+describe('createSpotifyClient', () => {
+  beforeEach(() => {
+    process.env = {
+      ...originalEnv,
+      SPOTIFY_CLIENT_ID: 'clientId',
+      SPOTIFY_CLIENT_SECRET: 'clientSecret'
+    };
+
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: true,
+      json: async () => ({ access_token: 'token' })
+    } as Response);
+  });
+
+  afterEach(() => {
+    process.env = originalEnv;
+    global.fetch = originalFetch;
+  });
+
+  it('returns access token when credentials are present', async () => {
+    const client = await createSpotifyClient();
+    expect(client).toEqual({ accessToken: 'token' });
+  });
 });

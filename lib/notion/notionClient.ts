@@ -1,3 +1,11 @@
-import { Client as NotionClient } from "@notionhq/client";
+import 'server-only';
 
-export const notionClient = new NotionClient({ auth: process.env.NOTION_API_KEY });
+import { Client as NotionClient } from '@notionhq/client';
+
+const notionApiKey = process.env.NOTION_API_KEY;
+
+export const notionClient = notionApiKey
+  ? new NotionClient({ auth: notionApiKey })
+  : null;
+
+export const hasNotion = Boolean(notionClient);

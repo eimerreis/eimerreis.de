@@ -1,38 +1,32 @@
-import {
-  BlockObjectResponse,
+import type {
   PageObjectResponse,
-  TitlePropertyItemObjectResponse,
+  RichTextItemResponse
 } from '@notionhq/client/build/src/api-endpoints';
-import { notionClient } from './notionClient';
-import { NotionBlock, NotionPage } from './types';
 
-export const getPage = async (pageId: string) => {
-  const response = await notionClient.pages.retrieve({ page_id: pageId });
-  return response;
-};
+import type { RichTextSpan } from './types';
 
-export const getFlatNotionPage = async (pageId: string): Promise<NotionPage> => {
-  const page = (await notionClient.pages.retrieve({
-    page_id: pageId,
-  })) as PageObjectResponse;
-  const title = extractTitle(page);
-  const content = await extractContent(pageId);
-
-  return { id: pageId, title, content };
+export const getProperty = (page: PageObjectResponse, names: string[]) => {
+  return names.map((name) => page.properties[name]).find(Boolean);
 };
 
 export const extractTitle = (page: PageObjectResponse): string => {
-  // Assuming the title is in the first text block
-  const titleBlock = (page.properties.Name as unknown as TitlePropertyItemObjectResponse).title[0];
-  return titleBlock ? titleBlock.plain_text : 'No Title';
+  const titleProperty = getProperty(page, ['Name', 'Title']);
+
+  if (!titleProperty || titleProperty.type !== 'title') {
+    return 'Untitled';
+  }
+
+  const title = titleProperty.title;
+  return title.map((item) => item.plain_text).join('').trim() || 'Untitled';
 };
 
-const extractContent = async (blockId: string): Promise<NotionBlock[]> => {
-  const contentBlocks = await notionClient.blocks.children.list({
-    block_id: blockId,
-  });
-  return contentBlocks.results.map((block: BlockObjectResponse) => ({
-    type: block.type,
-    text: block[block.type].text[0]?.plain_text || '',
+export const mapRichText = (richText: RichTextItemResponse[] = []): RichTextSpan[] => {
+  return richText.map((item) => ({
+    plainText: item.plain_text,
+    href: item.href,
+    annotations: item.annotations
   }));
 };
+
+export const getPlainText = (richText: RichTextItemResponse[] = []) =>
+  richText.map((item) => item.plain_text).join('').trim();

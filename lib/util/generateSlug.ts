@@ -1,4 +1,8 @@
 import slugify from 'slugify';
 
-export const generateSlug = (from: string) =>
-  slugify(from, { lower: true, remove: /[*+~.()'"!:@]/g });
+export const generateSlug = (value: string) =>
+  slugify(value, {
+    lower: true,
+    strict: true,
+    trim: true
+  });
