@@ -40,7 +40,9 @@ const fetchPlaylistsPage = async (
   );
 
   if (!response.ok) {
-    throw new Error('Failed to fetch Spotify playlists');
+    throw new Error(
+      `Failed to fetch Spotify playlists (${response.status} ${response.statusText})`
+    );
   }
 
   return response.json();
@@ -62,17 +64,22 @@ export const fetchAllPlaylists = async (
     return [];
   }
 
-  const pageSize = 50;
-  const firstPage = await fetchPlaylistsPage(client, 0, pageSize);
-  const requestCount = calculateRequestsNeeded(firstPage.total, pageSize, true);
+  try {
+    const pageSize = 50;
+    const firstPage = await fetchPlaylistsPage(client, 0, pageSize);
+    const requestCount = calculateRequestsNeeded(firstPage.total, pageSize, true);
 
-  const remainingPages = await Promise.all(
-    Array.from({ length: requestCount }, (_, index) =>
-      fetchPlaylistsPage(client, (index + 1) * pageSize, pageSize)
-    )
-  );
+    const remainingPages = await Promise.all(
+      Array.from({ length: requestCount }, (_, index) =>
+        fetchPlaylistsPage(client, (index + 1) * pageSize, pageSize)
+      )
+    );
 
-  return [...firstPage.items, ...remainingPages.flatMap((page) => page.items)]
-    .map(mapPlaylist)
-    .filter((playlist) => playlist.name.toLowerCase().includes('eimertunes'));
+    return [...firstPage.items, ...remainingPages.flatMap((page) => page.items)]
+      .map(mapPlaylist)
+      .filter((playlist) => playlist.name.toLowerCase().includes('eimertunes'));
+  } catch (error) {
+    console.error('Failed to load Spotify playlists. Rendering without playlists.', error);
+    return [];
+  }
 };

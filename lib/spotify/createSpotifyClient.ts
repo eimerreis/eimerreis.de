@@ -40,10 +40,19 @@ export const createSpotifyClient = async () => {
   } as NextFetchInit);
 
   if (!response.ok) {
-    throw new Error('Failed to authenticate with Spotify');
+    console.error(
+      `Failed to authenticate with Spotify (${response.status} ${response.statusText}). Rendering without playlists.`
+    );
+    return null;
   }
 
   const data = (await response.json()) as { access_token: string };
+
+  if (!data.access_token) {
+    console.error('Spotify auth response did not include an access token. Rendering without playlists.');
+    return null;
+  }
+
   return {
     accessToken: data.access_token
   };

@@ -40,4 +40,21 @@ describe('fetchAllPlaylists', () => {
     expect(playlists).toHaveLength(1);
     expect(playlists[0].name).toBe('EimerTunes 01');
   });
+
+  it('returns an empty array when Spotify playlists request fails', async () => {
+    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      status: 500,
+      statusText: 'Internal Server Error'
+    } as Response);
+
+    const playlists = await fetchAllPlaylists({ accessToken: 'token' });
+
+    expect(playlists).toEqual([]);
+    expect(global.fetch).toHaveBeenCalledTimes(1);
+
+    consoleErrorSpy.mockRestore();
+  });
 });
