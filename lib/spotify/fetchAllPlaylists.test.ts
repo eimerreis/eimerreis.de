@@ -1,4 +1,5 @@
 import { fetchAllPlaylists } from './fetchAllPlaylists';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 
 const originalFetch = global.fetch;
 
@@ -8,7 +9,7 @@ describe('fetchAllPlaylists', () => {
   });
 
   it('filters playlists to EimerTunes entries', async () => {
-    global.fetch = jest
+    global.fetch = vi
       .fn()
       .mockResolvedValueOnce({
         ok: true,
@@ -33,7 +34,7 @@ describe('fetchAllPlaylists', () => {
             }
           ]
         })
-      } as Response);
+      } as Response) as unknown as typeof fetch;
 
     const playlists = await fetchAllPlaylists({ accessToken: 'token' });
 
@@ -42,13 +43,13 @@ describe('fetchAllPlaylists', () => {
   });
 
   it('returns an empty array when Spotify playlists request fails', async () => {
-    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
 
-    global.fetch = jest.fn().mockResolvedValue({
+    global.fetch = vi.fn().mockResolvedValue({
       ok: false,
       status: 500,
       statusText: 'Internal Server Error'
-    } as Response);
+    } as Response) as unknown as typeof fetch;
 
     const playlists = await fetchAllPlaylists({ accessToken: 'token' });
 

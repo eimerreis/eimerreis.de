@@ -1,4 +1,5 @@
 import { createSpotifyClient } from './createSpotifyClient';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 const originalEnv = process.env;
 const originalFetch = global.fetch;
@@ -11,10 +12,10 @@ describe('createSpotifyClient', () => {
       SPOTIFY_CLIENT_SECRET: 'clientSecret'
     };
 
-    global.fetch = jest.fn().mockResolvedValue({
+    global.fetch = vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({ access_token: 'token' })
-    } as Response);
+    } as Response) as unknown as typeof fetch;
   });
 
   afterEach(() => {
@@ -28,13 +29,13 @@ describe('createSpotifyClient', () => {
   });
 
   it('returns null when Spotify authentication fails', async () => {
-    const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => undefined);
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
 
-    global.fetch = jest.fn().mockResolvedValue({
+    global.fetch = vi.fn().mockResolvedValue({
       ok: false,
       status: 401,
       statusText: 'Unauthorized'
-    } as Response);
+    } as Response) as unknown as typeof fetch;
 
     const client = await createSpotifyClient();
 
@@ -49,7 +50,7 @@ describe('createSpotifyClient', () => {
     delete process.env.CLIENT_ID;
     delete process.env.CLIENT_SECRET;
 
-    const fetchMock = jest.fn().mockResolvedValue({
+    const fetchMock = vi.fn().mockResolvedValue({
       ok: true,
       json: async () => ({ access_token: 'token' })
     } as Response);
