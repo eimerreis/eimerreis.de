@@ -118,7 +118,7 @@ export default async function HomePage() {
               ))
             ) : (
               <div className="surface rounded-3xl p-6 text-sm text-muted">
-                Spotify credentials are missing, so playlist previews are hidden.
+                Spotify playlists are temporarily unavailable.
               </div>
             )}
           </div>
