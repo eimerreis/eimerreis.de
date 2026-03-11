@@ -13,7 +13,7 @@ const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   }).format(new Date(value));
 
 export default async function HomePage() {
@@ -40,9 +40,8 @@ export default async function HomePage() {
           <div className="surface reveal rounded-[2rem] px-6 py-8 md:px-9 md:py-11">
             <p className="eyebrow">Freshly rebuilt</p>
             <h1 className="mt-4 max-w-3xl font-display text-[2.7rem] leading-[0.98] tracking-[-0.03em] text-ink md:text-[4.5rem]">
-              Hi, I&apos;m Moritz. I build{' '}
-              <span className="rainbow-word">playful interfaces</span> and write about how the
-              web feels.
+              Hi, I&apos;m Moritz. I build <span className="rainbow-word">playful interfaces</span> and write about how
+              the web feels.
             </h1>
             <p className="mt-6 max-w-2xl text-base text-muted md:text-lg">{siteConfig.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -61,18 +60,18 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <aside className="surface reveal delay-2 rounded-[1.8rem] px-6 py-7 md:mb-8 md:ml-auto md:max-w-[22rem]">
+          <aside className="surface !bg-[rgb(var(--color-paper-soft))] reveal delay-2 rounded-[1.8rem] px-6 py-7 md:mb-8 md:ml-auto md:max-w-[22rem]">
             <p className="eyebrow">Now playing</p>
             <h2 className="mt-3 font-display text-3xl leading-tight tracking-tight">
               Currently discovering the world of agentic coding
             </h2>
             <p className="mt-4 text-sm text-muted">
-              Did not expect such a paradigm shift in programming to come, but here we are. Excited to see where this goes.
+              Did not expect such a paradigm shift in programming to come, but here we are. Excited to see where this
+              goes.
             </p>
           </aside>
         </div>
       </section>
-
 
       <section className="grid gap-6 pb-16 reveal delay-2 md:grid-cols-[1.15fr_0.85fr]">
         <div className="space-y-1">
@@ -83,18 +82,13 @@ export default async function HomePage() {
             </Link>
           </div>
           <div className="stagger-children space-y-3">
-              {recentPosts.slice(0, 4).map((post) => (
-                <article
-                  key={post.id}
-                  className="surface group rounded-2xl px-4 py-3 md:px-5 md:py-4"
-                >
-                  <p className="text-[11px] uppercase tracking-[0.14em] text-muted">
-                    {formatDate(post.publishedAt)}
-                  </p>
-                  <h3 className="mt-2 font-display text-[1.65rem] tracking-tight text-ink transition group-hover:text-accent">
-                    <Link href={`/writing/${post.slug}`}>{post.title}</Link>
-                  </h3>
-                </article>
+            {recentPosts.slice(0, 4).map((post) => (
+              <article key={post.id} className="surface group rounded-2xl px-4 py-3 md:px-5 md:py-4">
+                <p className="text-[11px] uppercase tracking-[0.14em] text-muted">{formatDate(post.publishedAt)}</p>
+                <h3 className="mt-2 font-display text-[1.65rem] tracking-tight text-ink transition group-hover:text-accent">
+                  <Link href={`/writing/${post.slug}`}>{post.title}</Link>
+                </h3>
+              </article>
             ))}
           </div>
         </div>
@@ -108,9 +102,7 @@ export default async function HomePage() {
           </div>
           <div className="stagger-children space-y-3">
             {playlistPreview.length > 0 ? (
-              playlistPreview.map((playlist) => (
-                <PlaylistCard key={playlist.id} playlist={playlist} />
-              ))
+              playlistPreview.map((playlist) => <PlaylistCard key={playlist.id} playlist={playlist} />)
             ) : (
               <div className="surface rounded-3xl p-6 text-sm text-muted">
                 Spotify playlists are temporarily unavailable.
