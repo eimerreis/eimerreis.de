@@ -22,11 +22,8 @@ export default async function WritingPage() {
       <header className="reveal pb-12 pt-2">
         <p className="eyebrow">Writing</p>
         <h1 className="mt-3 max-w-4xl font-display text-5xl tracking-[-0.03em] md:text-7xl">
-          Notes and essays with a <span className="rainbow-word">frontend pulse</span>.
+          Notes with a <span className="rainbow-word">frontend pulse</span>.
         </h1>
-        <p className="mt-5 max-w-3xl text-muted md:text-lg">
-          Deep dives, postmortems, and small epiphanies from building on the web.
-        </p>
         {topics.length > 0 ? (
           <ul className="mt-8 flex flex-wrap gap-2.5">
             {topics.map((topic, index) => (

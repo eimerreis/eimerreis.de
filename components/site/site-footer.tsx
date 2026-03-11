@@ -54,7 +54,7 @@ export const SiteFooter = () => {
               <Link href="/" className="subtle-link">
                 Home
               </Link>
-              <a href={`${siteConfig.url}/rss.xml`} className="subtle-link">
+              <a href={`${siteConfig.url}/feed.xml`} className="subtle-link">
                 RSS
               </a>
             </div>

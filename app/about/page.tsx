@@ -4,15 +4,10 @@ import { ClayAvatar } from '@/components/site/clay-avatar';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Software developer, musician, and event curator.'
+  description: 'Software developer, musician, and event curator.',
 };
 
-const focusAreas = [
-  'Frontend architecture',
-  'Playful interaction design',
-  'Music curation',
-  'Boutique events'
-];
+const focusAreas = ['Frontend architecture', 'Playful interaction design', 'Music curation', 'Boutique events'];
 
 export default function AboutPage() {
   return (
@@ -26,18 +21,15 @@ export default function AboutPage() {
 
       <section className="relative grid gap-7 md:grid-cols-[1.04fr_0.96fr] md:items-end">
         <div className="pointer-events-none absolute right-0 top-0 hidden h-[32rem] w-[52%] overflow-hidden md:block">
-          <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.14] via-highlight/[0.16] to-transparent" />
-          <div className="absolute -top-14 right-[-18%] h-36 w-[72%] rounded-[100%] bg-paper" />
-          <ClayAvatar className="avatar-drift absolute bottom-[-3.8rem] right-[-4rem] z-10 w-[30rem]" />
+          <ClayAvatar className="avatar-drift absolute bottom-32 right-1 z-10 w-[16rem]" />
         </div>
 
         <div className="stagger-children relative z-20 space-y-4 reveal delay-1">
           <article className="surface rounded-[1.9rem] px-6 py-6 md:px-7 md:py-7">
             <h2 className="font-display text-3xl tracking-tight">What I do</h2>
             <p className="mt-4 text-muted">
-              I design and ship digital products with a bias for clear UX and strong editorial tone.
-              Most days, that means Next.js, TypeScript, and turning messy ideas into interfaces that
-              feel alive.
+              I design and ship digital products with a bias for clear UX and strong editorial tone. Most days, that
+              means Next.js, TypeScript, and turning messy ideas into interfaces that feel alive.
             </p>
           </article>
 
@@ -76,9 +68,11 @@ export default function AboutPage() {
           </article>
         </div>
 
-        <aside className="surface reveal-soft delay-2 relative z-20 rounded-[1.8rem] px-6 py-7 md:mb-10 md:ml-auto md:max-w-[22rem]">
+        <aside className="surface !bg-[rgb(var(--color-paper-soft))] reveal-soft delay-2 relative z-20 rounded-[1.8rem] px-6 py-7 md:mb-10 md:ml-auto md:max-w-[22rem]">
           <p className="eyebrow">Based in Freudenstadt</p>
-          <h2 className="mt-3 font-display text-3xl leading-tight tracking-tight">Forest-side builder, internet-first mindset.</h2>
+          <h2 className="mt-3 font-display text-3xl leading-tight tracking-tight">
+            Forest-side builder, internet-first mindset.
+          </h2>
           <p className="mt-4 text-sm text-muted">
             I work remotely from the Black Forest and love products that feel warm, fast, and unmistakably human.
           </p>
