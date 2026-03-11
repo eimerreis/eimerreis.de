@@ -14,6 +14,8 @@ module.exports = {
         ink: 'rgb(var(--color-ink) / <alpha-value>)',
         muted: 'rgb(var(--color-muted) / <alpha-value>)',
         accent: 'rgb(var(--color-accent) / <alpha-value>)',
+        accentAlt: 'rgb(var(--color-accent-alt) / <alpha-value>)',
+        highlight: 'rgb(var(--color-highlight) / <alpha-value>)',
         accentSoft: 'rgb(var(--color-accent-soft) / <alpha-value>)',
         line: 'rgb(var(--color-line) / <alpha-value>)'
       },
@@ -22,10 +24,10 @@ module.exports = {
         sans: ['var(--font-body)', 'sans-serif']
       },
       boxShadow: {
-        card: '0 24px 80px rgba(34, 27, 22, 0.08)'
+        card: '0 4px 0 rgba(31, 20, 24, 0.22), 0 20px 40px rgba(90, 49, 61, 0.2)'
       },
       backgroundImage: {
-        'page-glow': 'radial-gradient(circle at top left, rgba(176, 104, 74, 0.18), transparent 38%), radial-gradient(circle at top right, rgba(76, 92, 120, 0.12), transparent 34%)'
+        'page-glow': 'radial-gradient(circle at 8% 3%, rgba(255, 179, 72, 0.28), transparent 28%), radial-gradient(circle at 92% 8%, rgba(61, 102, 245, 0.14), transparent 34%), linear-gradient(180deg, #fffbf4 0%, #faf6ef 32%)'
       },
       maxWidth: {
         measure: '72ch'

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { IBM_Plex_Sans, Newsreader } from 'next/font/google';
+import { IBM_Plex_Sans, Space_Grotesk } from 'next/font/google';
 
 import './globals.css';
 import { siteConfig } from '@/lib/site-config';
@@ -8,10 +8,10 @@ import { SiteFooter } from '@/components/site/site-footer';
 import { SiteHeader } from '@/components/site/site-header';
 import { ThemeProvider } from '@/components/site/theme-provider';
 
-const display = Newsreader({
+const display = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-display',
-  weight: ['500', '700']
+  weight: ['400', '500', '700']
 });
 
 const body = IBM_Plex_Sans({
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
-      <body className="grain min-h-screen overflow-x-clip bg-page-glow font-sans text-ink antialiased">
+      <body className="min-h-screen overflow-x-clip font-sans text-ink antialiased">
         <ThemeProvider>
           <SiteHeader />
           <main className="mx-auto w-full max-w-6xl px-6">{children}</main>

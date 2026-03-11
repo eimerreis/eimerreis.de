@@ -8,18 +8,20 @@ export default async function PlaylistsPage() {
   const playlists = await createSpotifyClient().then(fetchAllPlaylists);
 
   return (
-    <div className="pb-10 pt-2">
+    <div className="pb-12 pt-2">
       <header className="reveal pb-12">
         <p className="eyebrow">Spotify</p>
-        <h1 className="mt-3 font-display text-5xl tracking-tight md:text-6xl">EimerTunes</h1>
-        <p className="mt-5 max-w-2xl text-muted md:text-lg">
+        <h1 className="mt-3 max-w-4xl font-display text-5xl tracking-[-0.03em] md:text-7xl">
+          Soundtrack archive with <span className="rainbow-word">monthly moods</span>.
+        </h1>
+        <p className="mt-5 max-w-3xl text-muted md:text-lg">
           Monthly playlists with rediscoveries, new favorites, and songs that escaped the filter
           bubble.
         </p>
       </header>
 
       {playlists.length > 0 ? (
-        <div className="grid gap-4 reveal delay-1 md:grid-cols-2">
+        <div className="stagger-children grid gap-4 reveal delay-1 md:grid-cols-2">
           {playlists.map((playlist) => (
             <PlaylistCard key={playlist.id} playlist={playlist} />
           ))}

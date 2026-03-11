@@ -8,12 +8,18 @@ const AnnotatedText = ({ span }: { span: RichTextSpan }) => {
     italic: span.annotations.italic,
     underline: span.annotations.underline,
     'line-through': span.annotations.strikethrough,
-    'rounded bg-accentSoft/25 px-1 py-0.5 font-mono text-[0.92em]': span.annotations.code
+    'rounded border border-line/80 bg-accentSoft/40 px-1 py-0.5 font-mono text-[0.92em]':
+      span.annotations.code
   });
 
   if (span.href) {
     return (
-      <a href={span.href} target="_blank" rel="noreferrer" className={className}>
+      <a
+        href={span.href}
+        target="_blank"
+        rel="noreferrer"
+        className={classNames(className, 'text-accent underline decoration-accent/45 underline-offset-4')}
+      >
         {span.plainText}
       </a>
     );

@@ -11,7 +11,7 @@ const formatDate = (value: string) =>
 
 export const PostCard = ({ post }: { post: PostSummary }) => {
   return (
-    <article className="surface group rounded-3xl p-6 transition hover:-translate-y-1">
+    <article className="surface group rounded-3xl p-6">
       <p className="text-xs uppercase tracking-[0.12em] text-muted">{formatDate(post.publishedAt)}</p>
       <h3 className="mt-3 font-display text-[2.15rem] leading-[1.06] tracking-tight text-ink transition group-hover:text-accent">
         <Link href={`/writing/${post.slug}`}>{post.title}</Link>
@@ -22,13 +22,21 @@ export const PostCard = ({ post }: { post: PostSummary }) => {
           {post.topics.map((topic) => (
             <li
               key={topic}
-              className="rounded-full border border-accent/25 bg-accent/5 px-3 py-1 text-[11px] uppercase tracking-[0.13em] text-accent"
+              className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-[11px] uppercase tracking-[0.13em] text-accent"
             >
               {topic}
             </li>
           ))}
         </ul>
       ) : null}
+      <div className="mt-6">
+        <Link
+          href={`/writing/${post.slug}`}
+          className="inline-flex rounded-full border-2 border-line bg-paper px-4 py-1.5 text-[11px] uppercase tracking-[0.14em] text-ink transition hover:border-accent/[0.45] hover:text-accent active:scale-95"
+        >
+          Read more
+        </Link>
+      </div>
     </article>
   );
 };
