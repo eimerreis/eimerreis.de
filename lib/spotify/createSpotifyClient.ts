@@ -1,15 +1,6 @@
 import 'server-only';
 
-const getSpotifyCredentials = () => {
-  const clientId = process.env.SPOTIFY_CLIENT_ID ?? process.env.CLIENT_ID;
-  const clientSecret = process.env.SPOTIFY_CLIENT_SECRET ?? process.env.CLIENT_SECRET;
-
-  if (!clientId || !clientSecret) {
-    return null;
-  }
-
-  return { clientId, clientSecret };
-};
+import { getSpotifyClientCredentials } from '../spotify-admin/config';
 
 type NextFetchInit = RequestInit & {
   next?: {
@@ -18,7 +9,7 @@ type NextFetchInit = RequestInit & {
 };
 
 export const createSpotifyClient = async () => {
-  const credentials = getSpotifyCredentials();
+  const credentials = getSpotifyClientCredentials();
 
   if (!credentials) {
     return null;

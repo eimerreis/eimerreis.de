@@ -24,11 +24,25 @@ Optional:
 - `SPOTIFY_CLIENT_ID` or `CLIENT_ID`
 - `SPOTIFY_CLIENT_SECRET` or `CLIENT_SECRET`
 - `SPOTIFY_USER_ID`
+- `SPOTIFY_ADMIN_ACCOUNT_ID` (defaults to `eimerreis`)
+- `SPOTIFY_ADMIN_REDIRECT_URI` (optional; defaults to `<site-url>/api/admin/spotify/callback`)
+- `SPOTIFY_ADMIN_TOKEN_SECRET` (required for encrypted admin token storage)
+- `SPOTIFY_ADMIN_SESSION_SECRET` (optional, recommended; defaults to `SPOTIFY_ADMIN_TOKEN_SECRET`)
+- `SPOTIFY_ADMIN_TOKEN_FILE` (optional; defaults to `.data/spotify-admin-token.enc`)
+- `SPOTIFY_CRON_SECRET` (recommended to secure automated job endpoint)
 - `NEXT_PUBLIC_SITE_URL`
 - `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`
 - `SITE_NAME`
 - `SITE_TAGLINE`
 - `SITE_DESCRIPTION`
+
+### Spotify Admin Automation
+
+- Open `/admin` and use **Connect Spotify**.
+- The OAuth callback verifies that the authenticated Spotify account matches `SPOTIFY_ADMIN_ACCOUNT_ID`.
+- Access + refresh tokens are stored encrypted on disk (default path: `.data/spotify-admin-token.enc`) using `SPOTIFY_ADMIN_TOKEN_SECRET`.
+- Run the monthly publish job manually via `/admin` or by POSTing to `/api/admin/spotify/publish-eimertunes`.
+- For cron usage, send `Authorization: Bearer <SPOTIFY_CRON_SECRET>`.
 
 ### Notion Schema
 
