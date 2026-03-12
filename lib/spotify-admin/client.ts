@@ -1,6 +1,6 @@
 import 'server-only';
 
-import { getSpotifyAdminAccountId, getSpotifyAdminTokenFilePath, getSpotifyTokenEncryptionSecret } from './config';
+import { getSpotifyAdminAccountId, getSpotifyAdminTokenKey, getSpotifyTokenEncryptionSecret } from './config';
 import { refreshAccessToken } from './oauth';
 import { readEncryptedSpotifyToken, type SpotifyStoredToken, writeEncryptedSpotifyToken } from './token-store';
 
@@ -18,7 +18,7 @@ const getEncryptionSecret = () => {
 
 const isTokenExpired = (token: SpotifyStoredToken) => Date.now() >= token.expiresAt - EXPIRY_GRACE_SECONDS * 1000;
 
-const refreshStoredToken = async (token: SpotifyStoredToken, encryptionSecret: string, tokenFilePath: string) => {
+const refreshStoredToken = async (token: SpotifyStoredToken, encryptionSecret: string, tokenKey: string) => {
   const refreshedToken = await refreshAccessToken(token.refreshToken);
 
   const nextToken: SpotifyStoredToken = {
@@ -31,15 +31,15 @@ const refreshStoredToken = async (token: SpotifyStoredToken, encryptionSecret: s
     updatedAt: Date.now(),
   };
 
-  await writeEncryptedSpotifyToken(tokenFilePath, encryptionSecret, nextToken);
+  await writeEncryptedSpotifyToken(tokenKey, encryptionSecret, nextToken);
 
   return nextToken;
 };
 
 export const getStoredSpotifyToken = async () => {
   const encryptionSecret = getEncryptionSecret();
-  const tokenFilePath = getSpotifyAdminTokenFilePath();
-  const token = await readEncryptedSpotifyToken(tokenFilePath, encryptionSecret);
+  const tokenKey = getSpotifyAdminTokenKey();
+  const token = await readEncryptedSpotifyToken(tokenKey, encryptionSecret);
 
   if (!token) {
     return null;
@@ -50,7 +50,7 @@ export const getStoredSpotifyToken = async () => {
   }
 
   if (isTokenExpired(token)) {
-    return refreshStoredToken(token, encryptionSecret, tokenFilePath);
+    return refreshStoredToken(token, encryptionSecret, tokenKey);
   }
 
   return token;

@@ -1,9 +1,7 @@
 import 'server-only';
 
-import fs from 'node:fs/promises';
-import path from 'node:path';
-
 import { decryptJson, encryptJson } from './crypto';
+import { getRedisClient } from './redis';
 
 export type SpotifyStoredToken = {
   accessToken: string;
@@ -15,33 +13,26 @@ export type SpotifyStoredToken = {
   updatedAt: number;
 };
 
-const ensureParentDir = async (filePath: string) => {
-  const parentDir = path.dirname(filePath);
-  await fs.mkdir(parentDir, { recursive: true });
-};
-
 export const readEncryptedSpotifyToken = async (
-  filePath: string,
+  tokenKey: string,
   encryptionSecret: string,
 ): Promise<SpotifyStoredToken | null> => {
-  try {
-    const encryptedContent = await fs.readFile(filePath, 'utf8');
-    return decryptJson<SpotifyStoredToken>(encryptedContent, encryptionSecret);
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      return null;
-    }
+  const redis = await getRedisClient();
+  const encryptedContent = await redis.get(tokenKey);
 
-    throw error;
+  if (!encryptedContent) {
+    return null;
   }
+
+  return decryptJson<SpotifyStoredToken>(encryptedContent, encryptionSecret);
 };
 
 export const writeEncryptedSpotifyToken = async (
-  filePath: string,
+  tokenKey: string,
   encryptionSecret: string,
   token: SpotifyStoredToken,
 ) => {
-  await ensureParentDir(filePath);
+  const redis = await getRedisClient();
   const encryptedContent = encryptJson(token, encryptionSecret);
-  await fs.writeFile(filePath, encryptedContent, { encoding: 'utf8', mode: 0o600 });
+  await redis.set(tokenKey, encryptedContent);
 };

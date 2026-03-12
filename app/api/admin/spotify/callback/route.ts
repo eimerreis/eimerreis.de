@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { verifySpotifyOAuthState } from '@/lib/spotify-admin/auth-cookies';
 import {
   getSpotifyAdminAccountId,
-  getSpotifyAdminTokenFilePath,
+  getSpotifyAdminTokenKey,
   getSpotifySessionSecret,
   getSpotifyTokenEncryptionSecret,
   SPOTIFY_ADMIN_OAUTH_STATE_COOKIE_NAME,
@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
       throw new Error(`Authenticated Spotify account is ${profile.id}, expected ${expectedAccountId}.`);
     }
 
-    await writeEncryptedSpotifyToken(getSpotifyAdminTokenFilePath(), encryptionSecret, {
+    await writeEncryptedSpotifyToken(getSpotifyAdminTokenKey(), encryptionSecret, {
       accessToken: tokenResponse.access_token,
       refreshToken: tokenResponse.refresh_token,
       expiresAt: Date.now() + tokenResponse.expires_in * 1000,

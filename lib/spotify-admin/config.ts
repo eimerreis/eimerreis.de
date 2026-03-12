@@ -1,11 +1,9 @@
 import 'server-only';
 
-import path from 'node:path';
-
 import { siteConfig } from '../site-config';
 
 const DEFAULT_ACCOUNT_ID = 'eimerreis';
-const DEFAULT_TOKEN_FILE_PATH = path.join(process.cwd(), '.data', 'spotify-admin-token.enc');
+const DEFAULT_TOKEN_KEY = 'spotify:admin:token';
 const SPOTIFY_ADMIN_SCOPES = ['playlist-read-private', 'playlist-modify-private', 'playlist-modify-public'];
 
 export const SPOTIFY_ADMIN_SESSION_COOKIE_NAME = 'spotify-admin-session';
@@ -40,7 +38,7 @@ export const getSpotifyOAuthRedirectUri = (origin?: string) => {
   return `${siteConfig.url}/api/admin/spotify/callback`;
 };
 
-export const getSpotifyAdminTokenFilePath = () => process.env.SPOTIFY_ADMIN_TOKEN_FILE ?? DEFAULT_TOKEN_FILE_PATH;
+export const getSpotifyAdminTokenKey = () => process.env.SPOTIFY_ADMIN_TOKEN_KEY ?? DEFAULT_TOKEN_KEY;
 
 export const getSpotifyTokenEncryptionSecret = () => process.env.SPOTIFY_ADMIN_TOKEN_SECRET ?? null;
 
@@ -58,6 +56,10 @@ export const getSpotifyAdminSetupIssues = () => {
 
   if (!getSpotifyTokenEncryptionSecret()) {
     issues.push('Missing SPOTIFY_ADMIN_TOKEN_SECRET for encrypted token storage.');
+  }
+
+  if (!process.env.REDIS_URL) {
+    issues.push('Missing REDIS_URL for Redis token storage.');
   }
 
   return issues;
