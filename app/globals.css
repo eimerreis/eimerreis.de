@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --font-display: 'Space Grotesk';
-  --font-body: 'IBM Plex Sans';
+  --font-display: "Space Grotesk";
+  --font-body: "IBM Plex Sans";
 
   --color-paper: 250 246 239;
   --color-paper-soft: 255 251 244;
@@ -53,7 +53,7 @@ body {
 
 body::before,
 body::after {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -93,7 +93,7 @@ a {
 
 .surface:hover {
   border-color: rgb(var(--color-accent) / 0.65);
-  box-shadow: 
+  box-shadow:
     0 4px 0 rgb(var(--color-ink) / 0.22),
     0 16px 28px rgb(var(--color-shadow) / 0.24),
     0 28px 48px rgb(var(--color-shadow) / 0.14),
@@ -213,7 +213,7 @@ a {
 
 .prose code::before,
 .prose code::after {
-  content: '';
+  content: "";
 }
 
 @keyframes reveal-rise {

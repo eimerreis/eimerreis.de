@@ -8,8 +8,7 @@ const AnnotatedText = ({ span }: { span: RichTextSpan }) => {
     italic: span.annotations.italic,
     underline: span.annotations.underline,
     'line-through': span.annotations.strikethrough,
-    'rounded border border-line/80 bg-accentSoft/40 px-1 py-0.5 font-mono text-[0.92em]':
-      span.annotations.code
+    'rounded border border-line/80 bg-accentSoft/40 px-1 py-0.5 font-mono text-[0.92em]': span.annotations.code,
   });
 
   if (span.href) {

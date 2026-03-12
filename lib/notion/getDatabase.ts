@@ -3,7 +3,7 @@ import 'server-only';
 import type {
   DatePropertyItemObjectResponse,
   MultiSelectPropertyItemObjectResponse,
-  PageObjectResponse
+  PageObjectResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 
 import { generateSlug } from '../util/generateSlug';
@@ -26,7 +26,7 @@ const getCheckbox = (page: PageObjectResponse, names: string[]) => {
 
 const getDate = (page: PageObjectResponse, names: string[]) => {
   const property = getProperty(page, names) as DatePropertyItemObjectResponse | undefined;
-  return property?.type === 'date' ? property.date?.start ?? null : null;
+  return property?.type === 'date' ? (property.date?.start ?? null) : null;
 };
 
 const getRichText = (page: PageObjectResponse, names: string[]) => {
@@ -39,9 +39,7 @@ const getRichText = (page: PageObjectResponse, names: string[]) => {
 
 const getMultiSelectValues = (page: PageObjectResponse, names: string[]) => {
   const property = getProperty(page, names) as MultiSelectPropertyItemObjectResponse | undefined;
-  return property?.type === 'multi_select'
-    ? property.multi_select.map((item) => item.name)
-    : [];
+  return property?.type === 'multi_select' ? property.multi_select.map((item) => item.name) : [];
 };
 
 const getSlug = (page: PageObjectResponse) => {
@@ -58,7 +56,7 @@ const mapPostSummary = (page: PageObjectResponse): PostSummary => ({
   topics: getMultiSelectValues(page, ['Topics', 'Tags']),
   featured: getCheckbox(page, ['Featured']),
   seoTitle: getRichText(page, ['SEO Title']) || undefined,
-  seoDescription: getRichText(page, ['SEO Description']) || undefined
+  seoDescription: getRichText(page, ['SEO Description']) || undefined,
 });
 
 const mapPageEntry = async (page: PageObjectResponse): Promise<PageEntry> => ({
@@ -68,13 +66,11 @@ const mapPageEntry = async (page: PageObjectResponse): Promise<PageEntry> => ({
   description: getRichText(page, ['Description']),
   seoTitle: getRichText(page, ['SEO Title']) || undefined,
   seoDescription: getRichText(page, ['SEO Description']) || undefined,
-  blocks: await getPageBlocks(page.id)
+  blocks: await getPageBlocks(page.id),
 });
 
 const sortByPublishedAt = <T extends { publishedAt: string }>(items: T[]) => {
-  return items.sort(
-    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
-  );
+  return items.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
 };
 
 const queryAllPages = async (databaseId: string) => {
@@ -89,11 +85,11 @@ const queryAllPages = async (databaseId: string) => {
     const response = await notionClient.databases.query({
       database_id: databaseId,
       page_size: 100,
-      start_cursor: cursor
+      start_cursor: cursor,
     });
 
     results.push(...response.results);
-    cursor = response.has_more ? response.next_cursor ?? undefined : undefined;
+    cursor = response.has_more ? (response.next_cursor ?? undefined) : undefined;
   } while (cursor);
 
   return results.filter(ensureFullPage);
@@ -107,10 +103,8 @@ export const getPosts = async (): Promise<PostSummary[]> => {
   const pages = await queryAllPages(postsDatabaseId);
   return sortByPublishedAt(
     pages
-      .filter((page: PageObjectResponse) =>
-        getCheckbox(page, ['Publish To Website', 'Published'])
-      )
-      .map(mapPostSummary)
+      .filter((page: PageObjectResponse) => getCheckbox(page, ['Publish To Website', 'Published']))
+      .map(mapPostSummary),
   );
 };
 
@@ -124,7 +118,7 @@ export const getPostBySlug = async (slug: string): Promise<PostDetail | null> =>
 
   return {
     ...post,
-    blocks: await getPageBlocks(post.id)
+    blocks: await getPageBlocks(post.id),
   };
 };
 
@@ -146,9 +140,7 @@ export const getPageBySlug = async (slug: string): Promise<PageEntry | null> => 
 
   const pages = await queryAllPages(pagesDatabaseId);
   const page = pages.find(
-    (entry: PageObjectResponse) =>
-      getCheckbox(entry, ['Publish To Website', 'Published']) &&
-      getSlug(entry) === slug
+    (entry: PageObjectResponse) => getCheckbox(entry, ['Publish To Website', 'Published']) && getSlug(entry) === slug,
   );
 
   return page ? mapPageEntry(page) : null;

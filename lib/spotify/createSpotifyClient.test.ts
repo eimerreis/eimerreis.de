@@ -9,12 +9,12 @@ describe('createSpotifyClient', () => {
     process.env = {
       ...originalEnv,
       SPOTIFY_CLIENT_ID: 'clientId',
-      SPOTIFY_CLIENT_SECRET: 'clientSecret'
+      SPOTIFY_CLIENT_SECRET: 'clientSecret',
     };
 
     global.fetch = vi.fn().mockResolvedValue({
       ok: true,
-      json: async () => ({ access_token: 'token' })
+      json: async () => ({ access_token: 'token' }),
     } as Response) as unknown as typeof fetch;
   });
 
@@ -34,7 +34,7 @@ describe('createSpotifyClient', () => {
     global.fetch = vi.fn().mockResolvedValue({
       ok: false,
       status: 401,
-      statusText: 'Unauthorized'
+      statusText: 'Unauthorized',
     } as Response) as unknown as typeof fetch;
 
     const client = await createSpotifyClient();
@@ -52,7 +52,7 @@ describe('createSpotifyClient', () => {
 
     const fetchMock = vi.fn().mockResolvedValue({
       ok: true,
-      json: async () => ({ access_token: 'token' })
+      json: async () => ({ access_token: 'token' }),
     } as Response);
     global.fetch = fetchMock as unknown as typeof fetch;
 

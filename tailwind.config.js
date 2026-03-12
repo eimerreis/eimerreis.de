@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './lib/**/*.{js,ts,jsx,tsx,mdx}'
+    './lib/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
   theme: {
@@ -17,20 +17,21 @@ module.exports = {
         accentAlt: 'rgb(var(--color-accent-alt) / <alpha-value>)',
         highlight: 'rgb(var(--color-highlight) / <alpha-value>)',
         accentSoft: 'rgb(var(--color-accent-soft) / <alpha-value>)',
-        line: 'rgb(var(--color-line) / <alpha-value>)'
+        line: 'rgb(var(--color-line) / <alpha-value>)',
       },
       fontFamily: {
         display: ['var(--font-display)', 'serif'],
-        sans: ['var(--font-body)', 'sans-serif']
+        sans: ['var(--font-body)', 'sans-serif'],
       },
       boxShadow: {
-        card: '0 4px 0 rgba(31, 20, 24, 0.22), 0 20px 40px rgba(90, 49, 61, 0.2)'
+        card: '0 4px 0 rgba(31, 20, 24, 0.22), 0 20px 40px rgba(90, 49, 61, 0.2)',
       },
       backgroundImage: {
-        'page-glow': 'radial-gradient(circle at 8% 3%, rgba(255, 179, 72, 0.28), transparent 28%), radial-gradient(circle at 92% 8%, rgba(61, 102, 245, 0.14), transparent 34%), linear-gradient(180deg, #fffbf4 0%, #faf6ef 32%)'
+        'page-glow':
+          'radial-gradient(circle at 8% 3%, rgba(255, 179, 72, 0.28), transparent 28%), radial-gradient(circle at 92% 8%, rgba(61, 102, 245, 0.14), transparent 34%), linear-gradient(180deg, #fffbf4 0%, #faf6ef 32%)',
       },
       maxWidth: {
-        measure: '72ch'
+        measure: '72ch',
       },
       typography: {
         DEFAULT: {
@@ -50,8 +51,8 @@ module.exports = {
             '--tw-prose-pre-code': 'rgb(245 239 233 / 1)',
             '--tw-prose-pre-bg': 'rgb(34 27 22 / 1)',
             '--tw-prose-th-borders': 'rgb(var(--color-line) / 1)',
-            '--tw-prose-td-borders': 'rgb(var(--color-line) / 0.65)'
-          }
+            '--tw-prose-td-borders': 'rgb(var(--color-line) / 0.65)',
+          },
         },
         invert: {
           css: {
@@ -68,11 +69,11 @@ module.exports = {
             '--tw-prose-pre-code': 'rgb(248 244 239 / 0.9)',
             '--tw-prose-pre-bg': 'rgb(24 22 20 / 1)',
             '--tw-prose-th-borders': 'rgb(88 80 74 / 1)',
-            '--tw-prose-td-borders': 'rgb(88 80 74 / 0.6)'
-          }
-        }
-      }
-    }
+            '--tw-prose-td-borders': 'rgb(88 80 74 / 0.6)',
+          },
+        },
+      },
+    },
   },
-  plugins: [require('@tailwindcss/typography')]
+  plugins: [require('@tailwindcss/typography')],
 };

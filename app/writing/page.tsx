@@ -8,7 +8,7 @@ const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   }).format(new Date(value));
 
 export default async function WritingPage() {
@@ -58,13 +58,8 @@ export default async function WritingPage() {
             </h2>
             <div className="stagger-children space-y-4">
               {groupedPosts[year].map((post) => (
-                <article
-                  key={post.id}
-                  className="surface group rounded-2xl px-4 py-4 md:px-6 md:py-5"
-                >
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-muted">
-                    {formatDate(post.publishedAt)}
-                  </p>
+                <article key={post.id} className="surface group rounded-2xl px-4 py-4 md:px-6 md:py-5">
+                  <p className="text-[11px] uppercase tracking-[0.15em] text-muted">{formatDate(post.publishedAt)}</p>
                   <h3 className="mt-2 font-display text-[2rem] leading-tight tracking-tight text-ink transition group-hover:text-accent">
                     <Link href={`/writing/${post.slug}`}>{post.title}</Link>
                   </h3>

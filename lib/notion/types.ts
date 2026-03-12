@@ -3,7 +3,7 @@ import type {
   PartialBlockObjectResponse,
   PageObjectResponse,
   PartialPageObjectResponse,
-  QueryDatabaseResponse
+  QueryDatabaseResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 
 export type NotionPageRecord = PageObjectResponse | PartialPageObjectResponse;

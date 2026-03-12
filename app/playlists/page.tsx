@@ -15,8 +15,7 @@ export default async function PlaylistsPage() {
           Soundtrack archive with <span className="rainbow-word">monthly moods</span>.
         </h1>
         <p className="mt-5 max-w-3xl text-muted md:text-lg">
-          Monthly playlists with rediscoveries, new favorites, and songs that escaped the filter
-          bubble.
+          Monthly playlists with rediscoveries, new favorites, and songs that escaped the filter bubble.
         </p>
       </header>
 

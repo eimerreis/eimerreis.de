@@ -35,13 +35,7 @@ export const SiteFooter = () => {
             <p className="text-[11px] uppercase tracking-[0.16em] text-muted">Social</p>
             <div className="mt-3 flex flex-col gap-2 text-sm">
               {siteConfig.socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="subtle-link"
-                >
+                <a key={link.label} href={link.href} target="_blank" rel="noreferrer" className="subtle-link">
                   {link.label}
                 </a>
               ))}

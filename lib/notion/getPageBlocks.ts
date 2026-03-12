@@ -1,9 +1,6 @@
 import 'server-only';
 
-import type {
-  BlockObjectResponse,
-  RichTextItemResponse
-} from '@notionhq/client/build/src/api-endpoints';
+import type { BlockObjectResponse, RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
 
 import { notionClient } from './notionClient';
 import { mapRichText } from './getPage';
@@ -37,14 +34,9 @@ const mapBlock = async (block: BlockObjectResponse): Promise<NotionBlockNode> =>
     children,
     richText: mapRichText(richText),
     caption: mapRichText(caption),
-    url:
-      getImageUrl(block) ??
-      (typeof data.url === 'string' ? data.url : undefined),
+    url: getImageUrl(block) ?? (typeof data.url === 'string' ? data.url : undefined),
     language: typeof data.language === 'string' ? data.language : undefined,
-    icon:
-      block.type === 'callout' && block.callout.icon?.type === 'emoji'
-        ? block.callout.icon.emoji
-        : undefined
+    icon: block.type === 'callout' && block.callout.icon?.type === 'emoji' ? block.callout.icon.emoji : undefined,
   };
 };
 
@@ -60,16 +52,15 @@ export const getPageBlocks = async (blockId: string): Promise<NotionBlockNode[]>
     const response = await notionClient.blocks.children.list({
       block_id: blockId,
       page_size: 100,
-      start_cursor: cursor
+      start_cursor: cursor,
     });
 
     results.push(...response.results);
-    cursor = response.has_more ? response.next_cursor ?? undefined : undefined;
+    cursor = response.has_more ? (response.next_cursor ?? undefined) : undefined;
   } while (cursor);
 
   const blocks = results.filter(
-    (block: unknown): block is BlockObjectResponse =>
-      block !== null && typeof block === 'object' && 'type' in block
+    (block: unknown): block is BlockObjectResponse => block !== null && typeof block === 'object' && 'type' in block,
   );
 
   return Promise.all(blocks.map(mapBlock));

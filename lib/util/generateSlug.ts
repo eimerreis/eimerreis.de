@@ -4,5 +4,5 @@ export const generateSlug = (value: string) =>
   slugify(value, {
     lower: true,
     strict: true,
-    trim: true
+    trim: true,
   });

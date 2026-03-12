@@ -27,22 +27,20 @@ const getUserId = () => process.env.SPOTIFY_USER_ID ?? 'eimerreis';
 const fetchPlaylistsPage = async (
   client: SpotifyClient,
   offset: number,
-  limit: number
+  limit: number,
 ): Promise<SpotifyPlaylistResponse> => {
   const response = await fetch(
     `https://api.spotify.com/v1/users/${getUserId()}/playlists?offset=${offset}&limit=${limit}`,
     {
       headers: {
-        Authorization: `Bearer ${client.accessToken}`
+        Authorization: `Bearer ${client.accessToken}`,
       },
-      next: { revalidate: 60 * 60 }
-    } as NextFetchInit
+      next: { revalidate: 60 * 60 },
+    } as NextFetchInit,
   );
 
   if (!response.ok) {
-    throw new Error(
-      `Failed to fetch Spotify playlists (${response.status} ${response.statusText})`
-    );
+    throw new Error(`Failed to fetch Spotify playlists (${response.status} ${response.statusText})`);
   }
 
   return response.json();
@@ -54,12 +52,10 @@ const mapPlaylist = (playlist: SpotifyPlaylistResponse['items'][number]): Playli
   description: playlist.description.replace(/<[^>]+>/g, '').trim(),
   href: playlist.external_urls.spotify,
   image: playlist.images[0]?.url ?? null,
-  totalTracks: playlist.tracks.total
+  totalTracks: playlist.tracks.total,
 });
 
-export const fetchAllPlaylists = async (
-  client: SpotifyClient | null
-): Promise<Playlist[]> => {
+export const fetchAllPlaylists = async (client: SpotifyClient | null): Promise<Playlist[]> => {
   if (!client) {
     return [];
   }
@@ -70,9 +66,7 @@ export const fetchAllPlaylists = async (
     const requestCount = calculateRequestsNeeded(firstPage.total, pageSize, true);
 
     const remainingPages = await Promise.all(
-      Array.from({ length: requestCount }, (_, index) =>
-        fetchPlaylistsPage(client, (index + 1) * pageSize, pageSize)
-      )
+      Array.from({ length: requestCount }, (_, index) => fetchPlaylistsPage(client, (index + 1) * pageSize, pageSize)),
     );
 
     return [...firstPage.items, ...remainingPages.flatMap((page) => page.items)]

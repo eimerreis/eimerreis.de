@@ -54,10 +54,7 @@ const renderSingleBlock = (block: NotionBlockNode): ReactNode => {
       );
     case 'callout':
       return (
-        <div
-          key={block.id}
-          className="surface my-6 rounded-2xl border-accent/30 bg-accent/10 px-5 py-4 text-sm"
-        >
+        <div key={block.id} className="surface my-6 rounded-2xl border-accent/30 bg-accent/10 px-5 py-4 text-sm">
           <p className="m-0">
             {block.icon ? <span className="mr-2">{block.icon}</span> : null}
             <RichText richText={block.richText} />
@@ -66,10 +63,7 @@ const renderSingleBlock = (block: NotionBlockNode): ReactNode => {
       );
     case 'code':
       return (
-        <pre
-          key={block.id}
-          className="overflow-x-auto rounded-xl border border-line/75 bg-ink px-4 py-3"
-        >
+        <pre key={block.id} className="overflow-x-auto rounded-xl border border-line/75 bg-ink px-4 py-3">
           <code>
             <RichText richText={block.richText} />
           </code>
@@ -121,11 +115,7 @@ const renderBlocks = (blocks: NotionBlockNode[]) => {
         index += 1;
         grouped.push(blocks[index]);
       }
-      output.push(
-        <ul key={`ul-${grouped[0].id}`}>
-          {grouped.map((item) => renderListItem(item))}
-        </ul>
-      );
+      output.push(<ul key={`ul-${grouped[0].id}`}>{grouped.map((item) => renderListItem(item))}</ul>);
       continue;
     }
 
@@ -135,11 +125,7 @@ const renderBlocks = (blocks: NotionBlockNode[]) => {
         index += 1;
         grouped.push(blocks[index]);
       }
-      output.push(
-        <ol key={`ol-${grouped[0].id}`}>
-          {grouped.map((item) => renderListItem(item))}
-        </ol>
-      );
+      output.push(<ol key={`ol-${grouped[0].id}`}>{grouped.map((item) => renderListItem(item))}</ol>);
       continue;
     }
 

@@ -12,7 +12,7 @@ const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: 'numeric',
   }).format(new Date(value));
 
 export async function generateStaticParams() {
@@ -20,17 +20,13 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ slug: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
 
   if (!post) {
     return {
-      title: siteConfig.name
+      title: siteConfig.name,
     };
   }
 
@@ -41,16 +37,12 @@ export async function generateMetadata({
       title: post.seoTitle ?? post.title,
       description: post.seoDescription ?? post.description,
       url: `${siteConfig.url}/writing/${post.slug}`,
-      type: 'article'
-    }
+      type: 'article',
+    },
   };
 }
 
-export default async function WritingDetailPage({
-  params
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function WritingDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const [post, posts] = await Promise.all([getPostBySlug(slug), getPosts()]);
 
@@ -98,10 +90,7 @@ export default async function WritingDetailPage({
 
       <section className="stagger-children mx-auto mt-14 grid max-w-5xl gap-4 reveal delay-2 md:grid-cols-2">
         {previousPost ? (
-          <Link
-            href={`/writing/${previousPost.slug}`}
-            className="surface rounded-2xl p-5"
-          >
+          <Link href={`/writing/${previousPost.slug}`} className="surface rounded-2xl p-5">
             <p className="text-xs uppercase tracking-[0.14em] text-muted">Previous</p>
             <p className="mt-2 font-display text-2xl tracking-tight transition hover:text-accent">
               {previousPost.title}
@@ -109,10 +98,7 @@ export default async function WritingDetailPage({
           </Link>
         ) : null}
         {nextPost ? (
-          <Link
-            href={`/writing/${nextPost.slug}`}
-            className="surface rounded-2xl p-5"
-          >
+          <Link href={`/writing/${nextPost.slug}`} className="surface rounded-2xl p-5">
             <p className="text-xs uppercase tracking-[0.14em] text-muted">Next</p>
             <p className="mt-2 font-display text-2xl tracking-tight transition hover:text-accentAlt">
               {nextPost.title}

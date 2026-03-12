@@ -21,12 +21,8 @@ export const PlaylistCard = ({ playlist }: { playlist: Playlist }) => {
             </div>
           )}
           <div className="min-w-0">
-            <p className="truncate font-display text-2xl leading-tight tracking-tight text-ink">
-              {playlist.name}
-            </p>
-            <p className="mt-1 text-xs uppercase tracking-[0.12em] text-muted">
-              {playlist.totalTracks} tracks
-            </p>
+            <p className="truncate font-display text-2xl leading-tight tracking-tight text-ink">{playlist.name}</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.12em] text-muted">{playlist.totalTracks} tracks</p>
           </div>
         </div>
         {playlist.description ? (

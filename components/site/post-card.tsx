@@ -6,7 +6,7 @@ const formatDate = (value: string) =>
   new Intl.DateTimeFormat('en', {
     year: 'numeric',
     month: 'short',
-    day: 'numeric'
+    day: 'numeric',
   }).format(new Date(value));
 
 export const PostCard = ({ post }: { post: PostSummary }) => {

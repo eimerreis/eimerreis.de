@@ -20,7 +20,7 @@ export async function GET() {
   <guid>${siteConfig.url}/writing/${post.slug}</guid>
   <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
   <description>${escapeXml(post.description)}</description>
-</item>`
+</item>`,
     )
     .join('\n');
 
@@ -36,7 +36,7 @@ export async function GET() {
 
   return new Response(rss, {
     headers: {
-      'Content-Type': 'application/rss+xml; charset=utf-8'
-    }
+      'Content-Type': 'application/rss+xml; charset=utf-8',
+    },
   });
 }
