@@ -21,11 +21,12 @@ export default function AboutPage() {
 
       <section className="relative grid gap-7 md:grid-cols-[1.04fr_0.96fr] md:items-end">
         <div className="pointer-events-none absolute right-0 top-0 hidden h-[32rem] w-[52%] overflow-hidden md:block">
-          <ClayAvatar className="avatar-drift absolute bottom-32 right-1 z-10 w-[16rem]">
+          <div className="avatar-shell avatar-drift absolute bottom-32 right-1 z-10 w-[16rem]">
+            <ClayAvatar />
             <div className="avatar-easteregg pointer-events-none absolute -right-4 top-4 rounded-full border border-accent/40 bg-paper/85 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-accent">
               hi there
             </div>
-          </ClayAvatar>
+          </div>
         </div>
 
         <div className="stagger-children relative z-20 space-y-4 reveal delay-1">

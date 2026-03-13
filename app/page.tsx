@@ -32,11 +32,12 @@ export default async function HomePage() {
     <div className="pb-8">
       <section className="relative pb-20 pt-2 md:pb-24">
         <div className="pointer-events-none absolute inset-x-0 top-2 h-[20rem] overflow-hidden reveal-soft md:h-[27rem]">
-          <ClayAvatar className="avatar-drift absolute bottom-[2rem] right-4 z-10 w-[18rem] md:bottom-[-3rem]">
+          <div className="avatar-shell avatar-drift absolute bottom-[2rem] right-4 z-10 w-[18rem] md:bottom-[-3rem]">
+            <ClayAvatar />
             <div className="avatar-easteregg pointer-events-none absolute -right-5 top-6 rounded-full border border-accentAlt/40 bg-paper/85 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-accentAlt">
               psst...
             </div>
-          </ClayAvatar>
+          </div>
         </div>
 
         <div className="relative z-20 grid gap-6 md:grid-cols-[1.06fr_0.94fr] md:items-end">
