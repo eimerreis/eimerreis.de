@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { ClayAvatar } from '@/components/site/clay-avatar';
 import { PlaylistCard } from '@/components/site/playlist-card';
 import { getPosts } from '@/lib/notion/getDatabase';
-import { createSpotifyClient } from '@/lib/spotify/createSpotifyClient';
-import { fetchAllPlaylists } from '@/lib/spotify/fetchAllPlaylists';
 import { siteConfig } from '@/lib/site-config';
+import { fetchAllPlaylists } from '@/lib/spotify/fetchAllPlaylists';
 
 export const revalidate = 1800;
 
@@ -17,7 +16,7 @@ const formatDate = (value: string) =>
   }).format(new Date(value));
 
 export default async function HomePage() {
-  const [posts, playlists] = await Promise.all([getPosts(), createSpotifyClient().then(fetchAllPlaylists)]);
+  const [posts, playlists] = await Promise.all([getPosts(), fetchAllPlaylists()]);
   const recentPosts = posts.slice(0, 6);
 
   const playlistPreview = playlists.slice(0, 3);

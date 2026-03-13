@@ -1,11 +1,10 @@
 import { PlaylistCard } from '@/components/site/playlist-card';
-import { createSpotifyClient } from '@/lib/spotify/createSpotifyClient';
 import { fetchAllPlaylists } from '@/lib/spotify/fetchAllPlaylists';
 
 export const revalidate = 3600;
 
 export default async function PlaylistsPage() {
-  const playlists = await createSpotifyClient().then(fetchAllPlaylists);
+  const playlists = await fetchAllPlaylists();
 
   return (
     <div className="pb-12 pt-2">
