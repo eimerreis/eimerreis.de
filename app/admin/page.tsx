@@ -36,6 +36,12 @@ const parseReport = (params: SearchParams) => {
   };
 };
 
+const successIcon = (
+  <svg viewBox="0 0 16 16" className="h-4 w-4" fill="none" aria-hidden="true">
+    <path className="success-check" d="M3.5 8.3 6.7 11.3 12.7 4.7" stroke="currentColor" strokeWidth="1.8" />
+  </svg>
+);
+
 export default async function AdminPage({ searchParams }: { searchParams: Promise<SearchParams> }) {
   const params = await searchParams;
   const session = await getSpotifyAdminSession();
@@ -115,15 +121,25 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
         ) : null}
 
         {connected ? (
-          <div className="mt-6 rounded-2xl border border-green-500/40 bg-green-100/70 p-4 text-sm text-green-900 dark:bg-green-900/20 dark:text-green-100">
-            Spotify account connected successfully.
+          <div className="success-badge mt-6 rounded-2xl border border-green-500/40 bg-green-100/70 p-4 text-sm text-green-900 dark:bg-green-900/20 dark:text-green-100">
+            <p className="inline-flex items-center gap-2 font-medium">
+              {successIcon}
+              Spotify account connected successfully.
+            </p>
+            <p className="mt-1 text-green-900/80 dark:text-green-100/85">Ready to run the monthly publish pass.</p>
           </div>
         ) : null}
 
         {jobRan && report ? (
-          <div className="mt-6 rounded-2xl border border-green-500/40 bg-green-100/70 p-4 text-sm text-green-900 dark:bg-green-900/20 dark:text-green-100">
-            Job completed. Scanned {report.scanned}, matched {report.matched}, made {report.madePublic} public, already
-            public {report.alreadyPublic}, skipped not owned {report.skippedNotOwned}.
+          <div className="success-badge mt-6 rounded-2xl border border-green-500/40 bg-green-100/70 p-4 text-sm text-green-900 dark:bg-green-900/20 dark:text-green-100">
+            <p className="inline-flex items-center gap-2 font-medium">
+              {successIcon}
+              Monthly publish pass complete.
+            </p>
+            <p className="mt-1 text-green-900/80 dark:text-green-100/85">
+              Scanned {report.scanned} playlists, matched {report.matched}, published {report.madePublic}, already
+              public {report.alreadyPublic}, skipped not owned {report.skippedNotOwned}.
+            </p>
           </div>
         ) : null}
 

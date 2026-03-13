@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { siteConfig } from '@/lib/site-config';
 import { ThemeToggle } from './theme-toggle';
@@ -11,6 +14,16 @@ const links = [
 ];
 
 export const SiteHeader = () => {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header className="mx-auto flex w-full max-w-6xl flex-col gap-7 px-6 pb-10 pt-10 md:flex-row md:items-end md:justify-between md:pb-12">
       <div className="reveal-soft">
@@ -30,7 +43,10 @@ export const SiteHeader = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="surface rounded-full border-line/75 bg-paperSoft/[0.85] px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-muted hover:text-accent active:scale-95"
+              className={`surface nav-pill rounded-full border-line/75 bg-paperSoft/[0.85] px-4 py-2 text-[11px] uppercase tracking-[0.16em] text-muted hover:text-accent active:scale-95 ${
+                isActive(link.href) ? 'nav-pill-active' : ''
+              }`}
+              aria-current={isActive(link.href) ? 'page' : undefined}
             >
               {link.label}
             </Link>

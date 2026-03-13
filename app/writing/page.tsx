@@ -45,9 +45,16 @@ export default async function WritingPage() {
       </header>
 
       {posts.length === 0 ? (
-        <div className="surface rounded-3xl p-6 text-sm text-muted">
-          No published posts found. Check your Notion database mapping.
-        </div>
+        <section className="surface rounded-[1.9rem] border-accent/[0.45] bg-gradient-to-r from-accent/[0.1] via-paperSoft to-accentAlt/[0.1] p-6 md:p-7">
+          <p className="eyebrow">Archive in progress</p>
+          <h2 className="mt-3 font-display text-3xl tracking-tight md:text-4xl">No published notes yet.</h2>
+          <p className="mt-4 max-w-2xl text-sm text-muted md:text-base">
+            As soon as your first note is marked for website publishing, it appears here.
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.14em] text-muted">
+            Quick check: Notion publish flags and database mapping.
+          </p>
+        </section>
       ) : null}
 
       <div className="space-y-12 reveal delay-1">

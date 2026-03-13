@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { NotionBlockRenderer } from '@/components/notion/notion-block-renderer';
+import { ReadingCompletion } from '@/components/site/reading-completion';
 import { getPostBySlug, getPostSlugs, getPosts } from '@/lib/notion/getDatabase';
 import { siteConfig } from '@/lib/site-config';
 
@@ -87,6 +88,8 @@ export default async function WritingDetailPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </section>
+
+      <ReadingCompletion slug={post.slug} nextPost={nextPost} previousPost={previousPost} />
 
       <section className="stagger-children mx-auto mt-14 grid max-w-5xl gap-4 reveal delay-2 md:grid-cols-2">
         {previousPost ? (
