@@ -1,10 +1,11 @@
 import { PlaylistCard } from '@/components/site/playlist-card';
-import { fetchAllPlaylists } from '@/lib/spotify/fetchAllPlaylists';
+import { getCachedPlaylists } from '@/lib/spotify/getCachedPlaylists';
 
 export const revalidate = 3600;
+export const dynamic = 'force-static';
 
 export default async function PlaylistsPage() {
-  const playlists = await fetchAllPlaylists();
+  const playlists = await getCachedPlaylists();
 
   return (
     <div className="pb-12 pt-2">
