@@ -34,11 +34,9 @@ export default async function PlaylistsPage() {
             </h2>
           </div>
 
-          <div className="md:col-span-8 stagger-children grid gap-6 sm:grid-cols-2">
+          <div className="md:col-span-8 stagger-children flex flex-col border-t border-line">
             {playlists.map((playlist) => (
-              <div key={playlist.id} className="h-full">
-                <PlaylistCard playlist={playlist} />
-              </div>
+              <PlaylistCard key={playlist.id} playlist={playlist} />
             ))}
           </div>
         </div>

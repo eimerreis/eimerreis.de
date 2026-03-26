@@ -171,11 +171,11 @@ export default async function HomePage() {
         </div>
 
         <div className="md:col-span-8">
-          <div className="stagger-children grid gap-6 sm:grid-cols-2">
+          <div className="stagger-children flex flex-col border-t border-line">
             {playlistPreview.length > 0 ? (
               playlistPreview.map((playlist) => <PlaylistCard key={playlist.id} playlist={playlist} />)
             ) : (
-              <div className="col-span-2 border border-line bg-paperSoft p-8 text-center font-display text-sm font-bold uppercase tracking-widest text-muted">
+              <div className="border border-line bg-paperSoft p-8 text-center font-display text-sm font-bold uppercase tracking-widest text-muted">
                 Playlists unavailable
               </div>
             )}
