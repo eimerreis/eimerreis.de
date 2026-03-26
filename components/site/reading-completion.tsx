@@ -66,38 +66,49 @@ export const ReadingCompletion = ({ slug, nextPost, previousPost }: ReadingCompl
   }, []);
 
   return (
-    <section ref={triggerRef} className="mx-auto mt-12 max-w-5xl">
+    <section ref={triggerRef} className="mx-auto mt-24 max-w-4xl px-6 md:px-0">
       <div
-        className={`completion-card surface rounded-[1.8rem] border-accent/[0.45] bg-gradient-to-r from-accent/[0.11] via-paperSoft to-accentAlt/[0.12] px-6 py-7 md:px-8 md:py-8 ${
-          revealed ? 'completion-card-visible' : ''
+        className={`completion-card border-2 border-ink bg-paper p-8 md:p-12 transition-all duration-700 ${
+          revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <p className="eyebrow">End of note</p>
-        <h2 className="mt-3 max-w-3xl font-display text-3xl tracking-tight md:text-4xl">{message}</h2>
-        <p className="mt-4 max-w-2xl text-sm text-muted md:text-base">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="h-[2px] w-8 bg-accent" />
+          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">End of note</p>
+        </div>
+
+        <h2 className="mt-4 font-display text-3xl font-bold uppercase tracking-tight md:text-5xl">{message}</h2>
+        <p className="mt-6 text-lg font-medium text-muted/90 max-w-xl">
           If this resonated, there is more where this came from.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3">
+
+        <div className="mt-10 flex flex-wrap gap-4">
           {nextSuggestion ? (
             <Link
               href={`/writing/${nextSuggestion.slug}`}
-              className="rounded-full border-2 border-accent/50 bg-accent/[0.12] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-accent transition hover:bg-accent/[0.18] active:scale-95"
+              className="group relative flex h-12 items-center justify-center overflow-hidden bg-ink px-6 font-display text-xs font-bold uppercase tracking-widest text-paper transition-all hover:bg-accent"
             >
-              Keep reading
+              <span className="relative z-10 transition-transform group-hover:-translate-y-10">Keep reading</span>
+              <span className="absolute inset-0 z-10 flex items-center justify-center translate-y-10 transition-transform group-hover:translate-y-0">
+                Keep reading
+              </span>
             </Link>
           ) : (
             <Link
               href="/writing"
-              className="rounded-full border-2 border-accent/50 bg-accent/[0.12] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-accent transition hover:bg-accent/[0.18] active:scale-95"
+              className="group relative flex h-12 items-center justify-center overflow-hidden bg-ink px-6 font-display text-xs font-bold uppercase tracking-widest text-paper transition-all hover:bg-accent"
             >
-              Open archive
+              <span className="relative z-10 transition-transform group-hover:-translate-y-10">Open archive</span>
+              <span className="absolute inset-0 z-10 flex items-center justify-center translate-y-10 transition-transform group-hover:translate-y-0">
+                Open archive
+              </span>
             </Link>
           )}
           <Link
             href="/playlists"
-            className="rounded-full border-2 border-line bg-paperSoft/[0.65] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-muted transition hover:border-accentAlt/[0.45] hover:text-accentAlt active:scale-95"
+            className="group relative flex h-12 items-center justify-center overflow-hidden border-2 border-ink bg-transparent px-6 font-display text-xs font-bold uppercase tracking-widest text-ink transition-all hover:bg-paperSoft"
           >
-            Play something
+            <span className="relative z-10">Play something</span>
           </Link>
         </div>
       </div>

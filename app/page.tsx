@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import { ClayAvatar } from '@/components/site/clay-avatar';
+import { Marquee } from '@/components/site/marquee';
 import { PlaylistCard } from '@/components/site/playlist-card';
 import { getPosts } from '@/lib/notion/getDatabase';
 import { siteConfig } from '@/lib/site-config';
@@ -29,110 +30,186 @@ export default async function HomePage() {
   }
 
   return (
-    <div className="pb-8">
-      <section className="relative pb-20 pt-2 md:pb-24">
-        <div className="pointer-events-none absolute inset-x-0 top-2 h-[20rem] overflow-hidden reveal-soft md:h-[27rem]">
-          <div className="avatar-shell avatar-drift absolute bottom-[2rem] right-4 z-10 w-[18rem] md:bottom-[-3rem]">
-            <ClayAvatar />
-            <div className="avatar-easteregg pointer-events-none absolute -right-5 top-6 rounded-full border border-accentAlt/40 bg-paper/85 px-3 py-1 text-[10px] uppercase tracking-[0.14em] text-accentAlt">
-              psst...
+    <div className="pb-16 relative">
+      <section className="relative z-10 pb-24 pt-12 md:pb-32 md:pt-20">
+        <div className="grid gap-12 md:grid-cols-12 md:gap-8">
+          <div className="reveal col-span-1 md:col-span-8 flex flex-col justify-center">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-[2px] w-12 bg-accent" />
+              <p className="font-display text-sm font-bold uppercase tracking-widest text-accent">
+                {new Date().getFullYear()} Edition
+              </p>
             </div>
-          </div>
-        </div>
 
-        <div className="relative z-20 grid gap-6 md:grid-cols-[1.06fr_0.94fr] md:items-end">
-          <div className="surface reveal rounded-[2rem] px-6 py-8 md:px-9 md:py-11">
-            <p className="eyebrow">Freshly rebuilt</p>
-            <h1 className="mt-4 max-w-3xl font-display text-[2.7rem] leading-[0.98] tracking-[-0.03em] text-ink md:text-[4.5rem]">
-              Hi, I&apos;m Moritz. I build <span className="rainbow-word">playful interfaces</span> and write about how
-              the web feels.
+            <h1 className="font-display text-[4rem] leading-[0.9] tracking-[-0.02em] text-ink md:text-[7.5rem] uppercase">
+              <span className="block font-light text-muted">Moritz</span>
+              <span className="block font-bold">Froelich.</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-base text-muted md:text-lg">{siteConfig.description}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+
+            <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-3xl border-t border-line/50 pt-8">
+              <div>
+                <p className="font-display text-xs font-bold uppercase tracking-widest text-muted mb-2">Focus</p>
+                <p className="text-xl font-medium leading-relaxed">
+                  Building <span className="text-accent">playful interfaces</span> and exploring how the web feels.
+                </p>
+              </div>
+              <div>
+                <p className="font-display text-xs font-bold uppercase tracking-widest text-muted mb-2">Currently</p>
+                <p className="text-xl font-medium leading-relaxed">{siteConfig.description}</p>
+              </div>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-4">
               <Link
                 href="/writing"
-                className="rounded-full border-2 border-accent/50 bg-accent/[0.12] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-accent transition hover:bg-accent/[0.18] active:scale-95"
+                className="group relative flex h-14 items-center justify-center overflow-hidden bg-ink px-8 font-display text-sm font-bold uppercase tracking-widest text-paper transition-all hover:bg-accent"
               >
-                Read writing
-              </Link>
-              <Link
-                href="/playlists"
-                className="rounded-full border-2 border-line bg-paperSoft/[0.65] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-muted transition hover:border-accentAlt/[0.45] hover:text-accentAlt active:scale-95"
-              >
-                Browse playlists
+                <span className="relative z-10 transition-transform group-hover:-translate-y-10">Read writing</span>
+                <span className="absolute inset-0 z-10 flex items-center justify-center translate-y-10 transition-transform group-hover:translate-y-0">
+                  Read writing
+                </span>
               </Link>
             </div>
           </div>
 
-          <aside className="surface !bg-[rgb(var(--color-paper-soft))] reveal delay-2 rounded-[1.8rem] px-6 py-7 md:mb-8 md:ml-auto md:max-w-[22rem]">
-            <p className="eyebrow">Now playing</p>
-            <h2 className="mt-3 font-display text-3xl leading-tight tracking-tight">
-              Currently discovering the world of agentic coding
-            </h2>
-            <p className="mt-4 text-sm text-muted">
-              Did not expect such a paradigm shift in programming to come, but here we are. Excited to see where this
-              goes.
-            </p>
+          <aside className="reveal delay-2 col-span-1 md:col-span-4 relative flex items-end justify-end">
+            <div className="w-full max-w-[320px] aspect-[4/5] bg-paperSoft border border-line p-6 flex flex-col justify-between relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-highlight/10 blur-3xl rounded-full" />
+
+              <div className="relative z-10">
+                <p className="font-display text-xs font-bold uppercase tracking-widest text-accent mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  Live update
+                </p>
+                <h2 className="font-display text-3xl leading-tight tracking-tight mb-4">
+                  Discovering agentic coding workflows
+                </h2>
+                <p className="text-sm text-muted">
+                  A massive paradigm shift in programming. Watching the space evolve rapidly.
+                </p>
+              </div>
+
+              <div className="relative z-10 self-end w-32 h-32 transform transition-transform duration-700 group-hover:scale-110">
+                <ClayAvatar />
+              </div>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section className="grid gap-6 pb-16 reveal delay-2 md:grid-cols-[1.15fr_0.85fr]">
-        <div className="space-y-1">
-          <div className="mb-5 flex items-end justify-between gap-4">
-            <h2 className="font-display text-3xl tracking-tighter md:text-4xl">Recent writing</h2>
-            <Link href="/writing" className="subtle-link text-xs uppercase tracking-[0.14em]">
-              All posts
-            </Link>
-          </div>
-          <div className="stagger-children space-y-3">
-            {recentPosts.slice(0, 4).map((post) => (
-              <article key={post.id} className="surface group rounded-2xl px-4 py-3 md:px-5 md:py-4">
-                <p className="text-[11px] uppercase tracking-[0.14em] text-muted">{formatDate(post.publishedAt)}</p>
-                <h3 className="mt-2 font-display text-[1.65rem] tracking-tight text-ink transition group-hover:text-accent">
-                  <Link href={`/writing/${post.slug}`}>{post.title}</Link>
-                </h3>
+      <div className="-mx-6 mb-24 reveal delay-2 overflow-hidden border-y border-line">
+        <Marquee
+          text="LATEST WRITING • MUSIC & CULTURE • THOUGHTS • ESSAYS • NOTES"
+          className="bg-paperSoft text-muted"
+        />
+      </div>
+
+      <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
+        <div className="md:col-span-4 flex flex-col items-start">
+          <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
+            Index
+            <span className="block font-bold text-accent">01.</span>
+          </h2>
+          <p className="text-lg text-muted mb-8 max-w-sm">
+            Essays, notes, and technical deep-dives into interface engineering and design.
+          </p>
+          <Link
+            href="/writing"
+            className="font-display text-sm font-bold uppercase tracking-widest text-ink hover:text-accent flex items-center gap-2"
+          >
+            <span className="w-8 h-px bg-current" />
+            View all posts
+          </Link>
+        </div>
+
+        <div className="md:col-span-8">
+          <div className="stagger-children flex flex-col border-t border-line">
+            {recentPosts.slice(0, 4).map((post, i) => (
+              <article
+                key={post.id}
+                className="group relative flex flex-col md:flex-row md:items-center justify-between gap-4 py-8 border-b border-line hover:bg-paperSoft/50 transition-colors -mx-6 px-6 md:mx-0 md:px-4"
+              >
+                <div className="flex items-center gap-6">
+                  <span className="font-display text-sm text-muted w-6">{(i + 1).toString().padStart(2, '0')}</span>
+                  <h3 className="font-display text-3xl font-medium tracking-tight text-ink group-hover:text-accent transition-colors">
+                    <Link href={`/writing/${post.slug}`} className="before:absolute before:inset-0">
+                      {post.title}
+                    </Link>
+                  </h3>
+                </div>
+                <div className="flex items-center gap-4 pl-12 md:pl-0">
+                  <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">
+                    {formatDate(post.publishedAt)}
+                  </p>
+                  <span className="text-accent opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                    &rarr;
+                  </span>
+                </div>
               </article>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="space-y-1">
-          <div className="mb-5 flex items-end justify-between gap-4">
-            <h2 className="font-display text-3xl tracking-tighter md:text-4xl">Playlist picks</h2>
-            <Link href="/playlists" className="subtle-link text-xs uppercase tracking-[0.14em]">
-              Full list
-            </Link>
-          </div>
-          <div className="stagger-children space-y-3">
+      <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
+        <div className="md:col-span-4 flex flex-col items-start">
+          <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
+            Index
+            <span className="block font-bold text-accentAlt">02.</span>
+          </h2>
+          <p className="text-lg text-muted mb-8 max-w-sm">
+            Curated soundscapes and monthly mixes to code, think, or zone out to.
+          </p>
+          <Link
+            href="/playlists"
+            className="font-display text-sm font-bold uppercase tracking-widest text-ink hover:text-accentAlt flex items-center gap-2"
+          >
+            <span className="w-8 h-px bg-current" />
+            View all playlists
+          </Link>
+        </div>
+
+        <div className="md:col-span-8">
+          <div className="stagger-children grid gap-6 sm:grid-cols-2">
             {playlistPreview.length > 0 ? (
               playlistPreview.map((playlist) => <PlaylistCard key={playlist.id} playlist={playlist} />)
             ) : (
-              <div className="surface rounded-3xl p-6 text-sm text-muted">Playlists are not available right now.</div>
+              <div className="col-span-2 border border-line bg-paperSoft p-8 text-center font-display text-sm font-bold uppercase tracking-widest text-muted">
+                Playlists unavailable
+              </div>
             )}
           </div>
         </div>
       </section>
 
-      <section className="reveal delay-3 pb-2">
-        <div className="surface rounded-[2rem] border-accent/[0.45] bg-gradient-to-r from-accent/[0.12] via-paperSoft to-accentAlt/[0.12] px-6 py-8 md:px-8 md:py-9">
-          <p className="eyebrow">No newsletter, just links</p>
-          <h2 className="mt-3 max-w-3xl font-display text-4xl tracking-tight md:text-5xl">
-            Follow along where I actually post stuff.
-          </h2>
-          <p className="mt-4 max-w-2xl text-muted">
-            I usually share new side projects, and monthly music picks on socials. Pick your lane.
-          </p>
-          <div className="stagger-children mt-6 flex flex-wrap gap-3">
+      <section className="relative z-10 reveal delay-3 border border-line bg-ink text-paper p-8 md:p-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="font-display text-4xl font-bold tracking-tighter uppercase md:text-5xl leading-[1.1] mb-6">
+              Connect & <br />
+              <span className="text-accentSoft font-light">Collaborate.</span>
+            </h2>
+            <p className="text-paper/70 font-medium text-lg max-w-md">
+              I share side projects, experiments, and monthly music picks across different platforms.
+            </p>
+          </div>
+
+          <div className="flex flex-col gap-px bg-line/20 border border-line/20">
             {siteConfig.socialLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-full border-2 border-line bg-paper/70 px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-ink transition hover:border-accent/[0.45] hover:text-accent active:scale-95"
+                className="group flex items-center justify-between bg-ink p-6 transition-colors hover:bg-paper/5"
               >
-                {link.label}
+                <span className="font-display text-sm font-bold uppercase tracking-widest text-paper/90 group-hover:text-white">
+                  {link.label}
+                </span>
+                <span className="text-accentSoft transform transition-transform group-hover:translate-x-1 group-hover:-translate-y-1">
+                  ↗
+                </span>
               </a>
             ))}
           </div>

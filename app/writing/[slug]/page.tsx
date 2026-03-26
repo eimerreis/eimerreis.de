@@ -56,58 +56,83 @@ export default async function WritingDetailPage({ params }: { params: Promise<{ 
   const previousPost = postIndex < posts.length - 1 ? posts[postIndex + 1] : null;
 
   return (
-    <article className="pb-14 pt-2">
-      <header className="mx-auto pb-12 reveal">
-        <p className="eyebrow">{formatDate(post.publishedAt)}</p>
-        <h1 className="mt-3 max-w-5xl font-display text-5xl leading-[1.01] tracking-[-0.03em] md:text-7xl">
+    <article className="pb-24 pt-12 relative z-10">
+      <header className="mx-auto pb-16 reveal border-b border-line mb-16">
+        <div className="flex items-center gap-4 mb-8">
+          <div className="h-[2px] w-12 bg-accent" />
+          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">
+            {formatDate(post.publishedAt)}
+          </p>
+        </div>
+        <h1 className="max-w-5xl font-display text-[3.5rem] leading-[0.9] tracking-[-0.02em] text-ink md:text-[5.5rem] font-bold uppercase">
           {post.title}
         </h1>
-        {post.description ? <p className="mt-6 max-w-3xl text-lg text-muted md:text-xl">{post.description}</p> : null}
+        {post.description ? (
+          <p className="mt-8 max-w-3xl text-xl font-medium text-muted/90 leading-relaxed border-l-4 border-accent pl-6">
+            {post.description}
+          </p>
+        ) : null}
+
         {post.topics.length > 0 ? (
-          <ul className="mt-7 flex flex-wrap gap-2.5">
+          <div className="mt-12 flex flex-wrap gap-3">
             {post.topics.map((topic, index) => (
-              <li
+              <div
                 key={topic}
-                className={`rounded-full border px-3 py-1.5 text-[11px] uppercase tracking-[0.15em] ${
+                className={`font-display text-xs font-bold uppercase tracking-widest px-4 py-2 border ${
                   index % 2 === 0
-                    ? 'border-accent/45 bg-accent/10 text-accent'
-                    : 'border-accentAlt/[0.45] bg-accentAlt/10 text-accentAlt'
+                    ? 'border-accent text-accent bg-accent/5'
+                    : 'border-accentAlt text-accentAlt bg-accentAlt/5'
                 }`}
               >
                 {topic}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         ) : null}
       </header>
 
-      <section className="reveal-soft delay-1">
-        <div className="surface rounded-[2rem] px-6 py-7 md:px-10 md:py-10">
-          <div className="prose prose-lg prose-neutral max-w-none dark:prose-invert">
-            <NotionBlockRenderer blocks={post.blocks} />
-          </div>
+      <section className="reveal-soft delay-1 max-w-4xl mx-auto">
+        <div className="prose prose-lg prose-neutral max-w-none dark:prose-invert">
+          <NotionBlockRenderer blocks={post.blocks} />
         </div>
       </section>
 
       <ReadingCompletion slug={post.slug} nextPost={nextPost} previousPost={previousPost} />
 
-      <section className="stagger-children mx-auto mt-14 grid max-w-5xl gap-4 reveal delay-2 md:grid-cols-2">
+      <section className="stagger-children mx-auto mt-24 grid max-w-5xl gap-6 reveal delay-2 md:grid-cols-2 pt-16 border-t border-line">
         {previousPost ? (
-          <Link href={`/writing/${previousPost.slug}`} className="surface rounded-2xl p-5">
-            <p className="text-xs uppercase tracking-[0.14em] text-muted">Previous</p>
-            <p className="mt-2 font-display text-2xl tracking-tight transition hover:text-accent">
+          <Link
+            href={`/writing/${previousPost.slug}`}
+            className="group flex flex-col items-start gap-4 p-6 border border-line bg-paperSoft hover:bg-paper hover:border-accent transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-accent transform group-hover:-translate-x-2 transition-transform">&larr;</span>
+              <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">Previous</p>
+            </div>
+            <p className="font-display text-2xl font-bold tracking-tight text-ink group-hover:text-accent transition-colors">
               {previousPost.title}
             </p>
           </Link>
-        ) : null}
+        ) : (
+          <div />
+        )}
+
         {nextPost ? (
-          <Link href={`/writing/${nextPost.slug}`} className="surface rounded-2xl p-5">
-            <p className="text-xs uppercase tracking-[0.14em] text-muted">Next</p>
-            <p className="mt-2 font-display text-2xl tracking-tight transition hover:text-accentAlt">
+          <Link
+            href={`/writing/${nextPost.slug}`}
+            className="group flex flex-col items-end text-right gap-4 p-6 border border-line bg-paperSoft hover:bg-paper hover:border-accentAlt transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">Next</p>
+              <span className="text-accentAlt transform group-hover:translate-x-2 transition-transform">&rarr;</span>
+            </div>
+            <p className="font-display text-2xl font-bold tracking-tight text-ink group-hover:text-accentAlt transition-colors">
               {nextPost.title}
             </p>
           </Link>
-        ) : null}
+        ) : (
+          <div />
+        )}
       </section>
     </article>
   );

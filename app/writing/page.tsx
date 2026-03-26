@@ -18,69 +18,96 @@ export default async function WritingPage() {
   const years = Object.keys(groupedPosts).sort((a, b) => Number(b) - Number(a));
 
   return (
-    <div className="pb-12">
-      <header className="reveal pb-12 pt-2">
-        <p className="eyebrow">Writing</p>
-        <h1 className="mt-3 max-w-4xl font-display text-5xl tracking-[-0.03em] md:text-7xl">
-          Notes with a <span className="rainbow-word">frontend pulse</span>.
+    <div className="pb-24 pt-12 relative z-10">
+      <header className="reveal pb-16 mb-16 border-b border-line">
+        <div className="flex items-center gap-4 mb-6">
+          <div className="h-[2px] w-12 bg-accent" />
+          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">Writing</p>
+        </div>
+
+        <h1 className="max-w-4xl font-display text-[3.5rem] leading-[0.9] tracking-[-0.02em] text-ink md:text-[5rem] uppercase font-bold">
+          Notes with a <span className="text-accent">frontend pulse</span>.
         </h1>
+
         {topics.length > 0 ? (
-          <ul className="mt-8 flex flex-wrap gap-2.5">
+          <div className="mt-12 flex flex-wrap gap-3">
             {topics.map((topic, index) => (
-              <li
+              <div
                 key={topic}
-                className={`rounded-full border px-3 py-1.5 text-[11px] uppercase tracking-[0.15em] ${
+                className={`font-display text-xs font-bold uppercase tracking-widest px-4 py-2 border ${
                   index % 3 === 0
-                    ? 'border-accent/45 bg-accent/10 text-accent'
+                    ? 'border-accent text-accent bg-accent/5'
                     : index % 3 === 1
-                      ? 'border-accentAlt/[0.45] bg-accentAlt/10 text-accentAlt'
-                      : 'border-highlight/60 bg-highlight/10 text-ink'
+                      ? 'border-accentAlt text-accentAlt bg-accentAlt/5'
+                      : 'border-ink text-ink bg-paperSoft'
                 }`}
               >
                 {topic}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         ) : null}
       </header>
 
       {posts.length === 0 ? (
-        <section className="surface rounded-[1.9rem] border-accent/[0.45] bg-gradient-to-r from-accent/[0.1] via-paperSoft to-accentAlt/[0.1] p-6 md:p-7">
-          <p className="eyebrow">Archive in progress</p>
-          <h2 className="mt-3 font-display text-3xl tracking-tight md:text-4xl">No published notes yet.</h2>
-          <p className="mt-4 max-w-2xl text-sm text-muted md:text-base">
+        <section className="border border-line bg-paperSoft p-8 md:p-12 max-w-2xl">
+          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted mb-4">
+            Archive in progress
+          </p>
+          <h2 className="font-display text-3xl font-light uppercase tracking-tight md:text-4xl mb-6">
+            No published notes yet.
+          </h2>
+          <p className="text-muted/80 font-medium mb-6">
             As soon as your first note is marked for website publishing, it appears here.
           </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.14em] text-muted">
-            Quick check: Notion publish flags and database mapping.
+          <p className="font-display text-[10px] uppercase tracking-widest text-muted bg-paper px-3 py-2 border border-line inline-block">
+            System check: Notion flags and database mapped
           </p>
         </section>
       ) : null}
 
-      <div className="space-y-12 reveal delay-1">
+      <div className="space-y-24 reveal delay-1">
         {years.map((year) => (
-          <section key={year}>
-            <h2 className="mb-5 inline-flex rounded-full border border-accent/40 bg-accent/10 px-4 py-1 font-display text-3xl tracking-tight text-accent md:text-4xl">
-              {year}
-            </h2>
-            <div className="stagger-children space-y-4">
-              {groupedPosts[year].map((post) => (
-                <article key={post.id} className="surface group rounded-2xl px-4 py-4 md:px-6 md:py-5">
-                  <p className="text-[11px] uppercase tracking-[0.15em] text-muted">{formatDate(post.publishedAt)}</p>
-                  <h3 className="mt-2 font-display text-[2rem] leading-tight tracking-tight text-ink transition group-hover:text-accent">
-                    <Link href={`/writing/${post.slug}`}>{post.title}</Link>
-                  </h3>
-                  {post.description ? <p className="mt-3 text-muted">{post.description}</p> : null}
-                  <div className="mt-4">
-                    <Link
-                      href={`/writing/${post.slug}`}
-                      className="inline-flex rounded-full border-2 border-line bg-paper px-4 py-1.5 text-[11px] uppercase tracking-[0.14em] text-ink transition hover:border-accent/[0.45] hover:text-accent active:scale-95"
-                    >
-                      Read article
-                    </Link>
-                  </div>
-                </article>
-              ))}
+          <section key={year} className="grid gap-12 md:grid-cols-12 md:gap-8">
+            <div className="md:col-span-3">
+              <h2 className="font-display text-6xl font-light tracking-tighter text-ink md:text-8xl sticky top-8">
+                {year}
+              </h2>
+            </div>
+
+            <div className="md:col-span-9 flex flex-col border-t border-line">
+              <div className="stagger-children">
+                {groupedPosts[year].map((post, i) => (
+                  <article
+                    key={post.id}
+                    className="group relative flex flex-col py-10 border-b border-line hover:bg-paperSoft/50 transition-colors -mx-6 px-6 md:mx-0 md:px-6"
+                  >
+                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-4">
+                      <div className="flex items-start gap-6 max-w-2xl">
+                        <span className="font-display text-sm text-muted w-6 pt-2">
+                          {(i + 1).toString().padStart(2, '0')}
+                        </span>
+                        <div>
+                          <h3 className="font-display text-3xl font-bold leading-[1.1] tracking-tight text-ink group-hover:text-accent transition-colors">
+                            <Link href={`/writing/${post.slug}`} className="before:absolute before:inset-0">
+                              {post.title}
+                            </Link>
+                          </h3>
+                          {post.description ? (
+                            <p className="mt-4 text-lg text-muted/90 font-medium leading-relaxed">{post.description}</p>
+                          ) : null}
+                        </div>
+                      </div>
+
+                      <div className="pl-12 md:pl-0 flex items-center gap-4 shrink-0 mt-4 md:mt-2">
+                        <p className="font-display text-xs font-bold uppercase tracking-widest text-muted bg-paper border border-line px-3 py-1">
+                          {formatDate(post.publishedAt)}
+                        </p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         ))}

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import { IBM_Plex_Sans, Space_Grotesk } from 'next/font/google';
+import Script from 'next/script';
 
 import './globals.css';
-import { siteConfig } from '@/lib/site-config';
 import { SiteFooter } from '@/components/site/site-footer';
 import { SiteHeader } from '@/components/site/site-header';
 import { ThemeProvider } from '@/components/site/theme-provider';
+import { siteConfig } from '@/lib/site-config';
 
 const display = Space_Grotesk({
   subsets: ['latin'],
@@ -46,6 +46,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen overflow-x-clip font-sans text-ink antialiased">
         <ThemeProvider>
+          {/* Background Grid System Lines */}
+          <div className="fixed inset-0 pointer-events-none hidden md:block z-[-1]" aria-hidden="true">
+            <div className="absolute top-0 bottom-0 left-[25%] w-px bg-line/20" />
+            <div className="absolute top-0 bottom-0 left-[50%] w-px bg-line/20" />
+            <div className="absolute top-0 bottom-0 left-[75%] w-px bg-line/20" />
+          </div>
+
           <SiteHeader />
           <main className="mx-auto w-full max-w-6xl px-6">{children}</main>
           <SiteFooter />

@@ -42,10 +42,7 @@ body {
 }
 
 body {
-  background:
-    radial-gradient(circle at 8% 3%, rgb(var(--color-highlight) / 0.3) 0, transparent 28%),
-    radial-gradient(circle at 92% 8%, rgb(var(--color-accent-alt) / 0.16) 0, transparent 34%),
-    linear-gradient(180deg, rgb(var(--color-paper-soft)) 0%, rgb(var(--color-paper)) 32%);
+  background: rgb(var(--color-paper));
   color: rgb(var(--color-ink));
   line-height: 1.55;
   min-height: 100vh;
@@ -61,15 +58,15 @@ body::after {
 }
 
 body::before {
-  background-image: radial-gradient(rgb(var(--color-ink) / 0.04) 0.8px, transparent 0.8px);
-  background-size: 6px 6px;
-  opacity: 0.28;
+  background-image:
+    linear-gradient(to right, rgb(var(--color-ink) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--color-ink) / 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 1;
 }
 
 body::after {
-  background:
-    linear-gradient(120deg, transparent 0 70%, rgb(var(--color-accent) / 0.07) 100%),
-    linear-gradient(300deg, transparent 0 76%, rgb(var(--color-accent-alt) / 0.06) 100%);
+  background: radial-gradient(circle at 50% 0%, rgb(var(--color-accent) / 0.08) 0, transparent 60%);
 }
 
 a {
@@ -79,11 +76,6 @@ a {
 
 .surface {
   background: rgb(var(--color-paper-soft) / 0.88);
-  border: 2px solid rgb(var(--color-line) / 0.76);
-  box-shadow:
-    0 2px 0 rgb(var(--color-ink) / 0.18),
-    0 14px 24px rgb(var(--color-shadow) / 0.18),
-    0 28px 56px rgb(var(--color-shadow) / 0.1);
   transition:
     transform 460ms cubic-bezier(0.18, 0.89, 0.32, 1.28),
     border-color 220ms ease,
@@ -92,12 +84,6 @@ a {
 }
 
 .surface:hover {
-  border-color: rgb(var(--color-accent) / 0.65);
-  box-shadow:
-    0 4px 0 rgb(var(--color-ink) / 0.22),
-    0 16px 28px rgb(var(--color-shadow) / 0.24),
-    0 28px 48px rgb(var(--color-shadow) / 0.14),
-    0 0 0 8px rgb(var(--color-accent) / 0.1);
   transform: translateY(-4px);
 }
 
@@ -479,6 +465,19 @@ a {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
