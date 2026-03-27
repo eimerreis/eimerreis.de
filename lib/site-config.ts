@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: process.env.SITE_NAME ?? 'eimerreis.de | Moritz Frölich',
+  name: process.env.SITE_NAME ?? 'eimerreis.de',
   title: process.env.SITE_NAME ?? 'eimerreis.de',
   tagline:
     process.env.SITE_TAGLINE ?? 'Writing about frontend craft, internet culture, and the things worth replaying.',

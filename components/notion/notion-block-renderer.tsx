@@ -32,7 +32,7 @@ const renderSingleBlock = (block: NotionBlockNode): ReactNode => {
       return (
         <h1
           key={block.id}
-          className="font-display text-4xl font-bold uppercase tracking-tight mt-16 mb-8 border-b-2 border-ink pb-4"
+          className="font-display text-4xl font-bold uppercase tracking-tight mt-16 mb-8 border-b-2 border-ink py-8"
         >
           <RichText richText={block.richText} />
         </h1>
@@ -41,7 +41,7 @@ const renderSingleBlock = (block: NotionBlockNode): ReactNode => {
       return (
         <h2
           key={block.id}
-          className="font-display text-3xl font-bold tracking-tight mt-12 mb-6 text-ink flex items-center gap-4"
+          className="font-display text-3xl font-bold tracking-tight mt-12 mb-6 text-ink flex items-center gap-4 py-6"
         >
           <span className="w-6 h-6 bg-accent rounded-full inline-block shrink-0" />
           <RichText richText={block.richText} />
@@ -49,7 +49,7 @@ const renderSingleBlock = (block: NotionBlockNode): ReactNode => {
       );
     case 'heading_3':
       return (
-        <h3 key={block.id} className="font-display text-xl font-bold uppercase tracking-widest mt-10 mb-4 text-ink/80">
+        <h3 key={block.id} className="font-display text-xl font-bold uppercase tracking-widest mt-10 mb-4 text-ink/80 py-4">
           <RichText richText={block.richText} />
         </h3>
       );
