@@ -141,7 +141,7 @@ const renderBlocks = (blocks: NotionBlockNode[]) => {
         grouped.push(blocks[index]);
       }
       output.push(
-        <ul key={`ul-${grouped[0].id}`} className="list-none space-y-3 my-6 border-l-2 border-line/30 ml-2">
+        <ul key={`ul-${grouped[0].id}`} className="list-disc space-y-3 my-6 border-l-2 border-line/30 ml-2">
           {grouped.map((item) => renderListItem(item))}
         </ul>,
       );

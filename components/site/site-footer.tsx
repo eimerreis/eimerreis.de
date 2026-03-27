@@ -10,7 +10,7 @@ export const SiteFooter = () => {
       <div className="reveal-soft delay-3 py-16 md:py-24">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-2 max-w-sm">
-            <p className="font-display text-2xl font-bold uppercase tracking-tight text-ink mb-4">Eimer Reis</p>
+            <p className="font-display text-2xl font-bold uppercase tracking-tight text-ink mb-4">eimerreis</p>
             <p className="text-lg text-muted font-medium leading-relaxed mb-6">
               Built with Notion as CMS and a custom Next.js frontend.
             </p>
@@ -66,7 +66,7 @@ export const SiteFooter = () => {
         </div>
 
         <div className="mt-20 pt-6 border-t border-line flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">© {year} Eimer Reis.</p>
+          <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">© {year} eimerreis.</p>
           <p className="font-display text-[10px] uppercase tracking-widest text-muted/60">Designed for reading.</p>
         </div>
       </div>

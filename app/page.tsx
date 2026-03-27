@@ -43,7 +43,7 @@ export default async function HomePage() {
 
             <h1 className="font-display text-[4rem] leading-[0.9] tracking-[-0.02em] text-ink md:text-[7.5rem] uppercase">
               <span className="block font-light text-muted">Moritz</span>
-              <span className="block font-bold">Froelich.</span>
+              <span className="block font-bold">Frölich.</span>
             </h1>
 
             <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-3xl border-t border-line/50 pt-8">

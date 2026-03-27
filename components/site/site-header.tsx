@@ -27,7 +27,6 @@ export const SiteHeader = () => {
   return (
     <header className="mx-auto flex w-full max-w-6xl flex-col gap-7 px-6 pb-10 pt-10 md:flex-row md:items-end md:justify-between md:pb-12 border-b border-line mb-8">
       <div className="reveal-soft">
-        <p className="font-display text-xs font-bold uppercase tracking-widest text-accent mb-3">Eimer Reis</p>
         <Link
           href="/"
           className="font-display text-4xl font-bold tracking-tighter text-ink transition hover:text-accent md:text-5xl uppercase leading-none"

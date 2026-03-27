@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: process.env.SITE_NAME ?? 'eimerreis.de',
-  title: process.env.SITE_NAME ?? 'Eimer Reis',
+  name: process.env.SITE_NAME ?? 'eimerreis.de | Moritz Frölich',
+  title: process.env.SITE_NAME ?? 'eimerreis.de',
   tagline:
     process.env.SITE_TAGLINE ?? 'Writing about frontend craft, internet culture, and the things worth replaying.',
   description:
-    process.env.SITE_DESCRIPTION ?? 'A personal website collecting notes, and monthly playlists by Eimer Reis.',
+    process.env.SITE_DESCRIPTION ?? 'A personal website collecting notes, and monthly playlists by eimerreis  .',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://eimerreis.de',
   plausibleDomain: process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN ?? 'eimerreis.de',
   socialLinks: [
