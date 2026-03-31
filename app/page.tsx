@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { ClayAvatar } from '@/components/site/clay-avatar';
 import { Marquee } from '@/components/site/marquee';
 import { PlaylistCard } from '@/components/site/playlist-card';
+import { ProjectCard } from '@/components/site/project-card';
 import { getPosts } from '@/lib/notion/getDatabase';
+import { getFeaturedProjects } from '@/lib/projects';
 import { siteConfig } from '@/lib/site-config';
 import { getCachedPlaylists } from '@/lib/spotify/getCachedPlaylists';
 
@@ -17,7 +19,11 @@ const formatDate = (value: string) =>
   }).format(new Date(value));
 
 export default async function HomePage() {
-  const [posts, playlists] = await Promise.all([getPosts(), getCachedPlaylists()]);
+  const [posts, playlists, featuredProjects] = await Promise.all([
+    getPosts(),
+    getCachedPlaylists(),
+    getFeaturedProjects(3),
+  ]);
   const recentPosts = posts.slice(0, 6);
 
   const playlistPreview = playlists.slice(0, 3);
@@ -180,6 +186,39 @@ export default async function HomePage() {
               </div>
             )}
           </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
+        <div className="md:col-span-4 flex flex-col items-start">
+          <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
+            Index
+            <span className="block font-bold text-highlight">03.</span>
+          </h2>
+          <p className="text-lg text-muted mb-8 max-w-sm">
+            Open source utilities, product experiments, and self-hosted builds that map the work beyond writing.
+          </p>
+          <Link
+            href="/projects"
+            className="font-display text-sm font-bold uppercase tracking-widest text-ink hover:text-highlight flex items-center gap-2"
+          >
+            <span className="w-8 h-px bg-current" />
+            View all projects
+          </Link>
+        </div>
+
+        <div className="md:col-span-8">
+          {featuredProjects.length > 0 ? (
+            <div className="stagger-children grid gap-6 md:grid-cols-1">
+              {featuredProjects.map((project) => (
+                <ProjectCard key={project.slug} project={project} />
+              ))}
+            </div>
+          ) : (
+            <div className="border border-line bg-paperSoft p-8 text-center font-display text-sm font-bold uppercase tracking-widest text-muted">
+              Projects coming soon
+            </div>
+          )}
         </div>
       </section>
 

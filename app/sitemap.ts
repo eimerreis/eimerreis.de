@@ -1,12 +1,13 @@
 import type { MetadataRoute } from 'next';
 
 import { getPostSlugs } from '@/lib/notion/getDatabase';
+import { getProjectSlugs } from '@/lib/projects';
 import { siteConfig } from '@/lib/site-config';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const postSlugs = await getPostSlugs();
+  const [postSlugs, projectSlugs] = await Promise.all([getPostSlugs(), getProjectSlugs()]);
 
-  const staticRoutes = ['', '/writing', '/playlists', '/about'].map((route) => ({
+  const staticRoutes = ['', '/writing', '/playlists', '/projects', '/about'].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
   }));
@@ -16,5 +17,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: new Date(),
   }));
 
-  return [...staticRoutes, ...writingRoutes];
+  const projectRoutes = projectSlugs.map((slug) => ({
+    url: `${siteConfig.url}/projects/${slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticRoutes, ...writingRoutes, ...projectRoutes];
 }
