@@ -114,7 +114,7 @@ export default async function HomePage() {
       <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-4 flex flex-col items-start">
           <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
-            Index
+            Writing
             <span className="block font-bold text-accent">01.</span>
           </h2>
           <p className="text-lg text-muted mb-8 max-w-sm">
@@ -161,7 +161,7 @@ export default async function HomePage() {
       <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-4 flex flex-col items-start">
           <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
-            Index
+            Playlists
             <span className="block font-bold text-accentAlt">02.</span>
           </h2>
           <p className="text-lg text-muted mb-8 max-w-sm">
@@ -192,7 +192,7 @@ export default async function HomePage() {
       <section className="relative z-10 mb-32 grid gap-16 md:grid-cols-12 md:gap-8">
         <div className="md:col-span-4 flex flex-col items-start">
           <h2 className="font-display text-5xl font-light tracking-tighter uppercase md:text-6xl mb-6">
-            Index
+            Projects
             <span className="block font-bold text-highlight">03.</span>
           </h2>
           <p className="text-lg text-muted mb-8 max-w-sm">
