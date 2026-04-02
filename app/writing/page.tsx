@@ -82,12 +82,12 @@ export default async function WritingPage() {
                     key={post.id}
                     className="group relative flex flex-col py-10 border-b border-line hover:bg-paperSoft/50 transition-colors -mx-6 px-6 md:mx-0 md:px-6"
                   >
-                    <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 mb-4">
-                      <div className="flex items-start gap-6 max-w-2xl">
+                    <div className="flex flex-col gap-6 mb-4 md:grid md:grid-cols-[minmax(0,1fr)_11rem] md:items-start md:gap-8">
+                      <div className="flex items-start gap-6 min-w-0 max-w-[48rem]">
                         <span className="font-display text-sm text-muted w-6 pt-2">
                           {(i + 1).toString().padStart(2, '0')}
                         </span>
-                        <div>
+                        <div className="min-w-0">
                           <h3 className="font-display text-3xl font-bold leading-[1.1] tracking-tight text-ink group-hover:text-accent transition-colors">
                             <Link href={`/writing/${post.slug}`} className="before:absolute before:inset-0">
                               {post.title}
@@ -99,8 +99,8 @@ export default async function WritingPage() {
                         </div>
                       </div>
 
-                      <div className="pl-12 md:pl-0 flex items-center gap-4 shrink-0 mt-4 md:mt-2">
-                        <p className="font-display text-xs font-bold uppercase tracking-widest text-muted bg-paper border border-line px-3 py-1">
+                      <div className="pl-12 md:pl-0 flex items-center md:justify-end md:self-start shrink-0 mt-4 md:mt-2">
+                        <p className="font-display text-xs font-bold uppercase tracking-widest text-muted bg-paper border border-line px-3 py-1 whitespace-nowrap text-left md:min-w-[10rem] md:text-right">
                           {formatDate(post.publishedAt)}
                         </p>
                       </div>

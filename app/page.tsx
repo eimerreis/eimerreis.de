@@ -89,10 +89,10 @@ export default async function HomePage() {
                   Live update
                 </p>
                 <h2 className="font-display text-3xl leading-tight tracking-tight mb-4">
-                  Discovering agentic coding workflows
+                  Currently discovering agentic coding workflows
                 </h2>
                 <p className="text-sm text-muted">
-                  A massive paradigm shift in programming. Watching the space evolve rapidly.
+                  didn't expect that shift to come so early, but early 2026 proved me wrong 😂
                 </p>
               </div>
 
