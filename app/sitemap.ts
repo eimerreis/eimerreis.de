@@ -7,7 +7,7 @@ import { siteConfig } from '@/lib/site-config';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [postSlugs, projectSlugs] = await Promise.all([getPostSlugs(), getProjectSlugs()]);
 
-  const staticRoutes = ['', '/writing', '/playlists', '/projects', '/about'].map((route) => ({
+  const staticRoutes = ['', '/writing', '/playlists', '/projects', '/about', '/legalnotice'].map((route) => ({
     url: `${siteConfig.url}${route}`,
     lastModified: new Date(),
   }));

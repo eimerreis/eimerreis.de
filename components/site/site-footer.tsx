@@ -35,6 +35,10 @@ export const SiteFooter = () => {
                 <span className="w-4 h-px bg-line group-hover:w-6 group-hover:bg-accentAlt transition-all" />
                 Playlists
               </Link>
+              <Link href="/legalnotice" className="hover:text-ink transition-colors flex items-center gap-2 group">
+                <span className="w-4 h-px bg-line group-hover:w-6 group-hover:bg-ink transition-all" />
+                Legal Notice
+              </Link>
               <a
                 href={`${siteConfig.url}/feed.xml`}
                 className="hover:text-highlight transition-colors flex items-center gap-2 group"
