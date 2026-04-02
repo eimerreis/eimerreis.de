@@ -20,13 +20,11 @@ year: 2026
 
 ## How it works
 
-> 💡 **Prerequisite**: You need to have the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed and authenticated with access to the relevant Azure DevOps organization.
+> **Prerequisite 💡**: You need to have the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed and authenticated with access to the relevant Azure DevOps organization.
 
 In a folder with an .npmrc that points to an Azure Artifacts feed, run:
 
-```bash
-npx @eimerreis/az-npm
-```
+`npx @eimerreis/az-npm`
 The tool uses the Azure CLI as the authentication anchor, then writes the right credentials for `npm`, `pnpm`, or `bun` so private registry access is actually a one-command step.
 
 ## Why I made it
