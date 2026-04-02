@@ -144,7 +144,7 @@ export default async function HomePage() {
                     </Link>
                   </h3>
                 </div>
-                <div className="flex items-center gap-4 pl-12 md:pl-0">
+                <div className="flex items-center shrink-0 gap-4 pl-12 md:pl-0">
                   <p className="font-display text-xs font-bold uppercase tracking-widest text-muted">
                     {formatDate(post.publishedAt)}
                   </p>
