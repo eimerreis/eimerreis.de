@@ -16,13 +16,23 @@ seoDescription: Zero-config CLI that authenticates npm, pnpm, and bun against Az
 year: 2026
 ---
 
-`az-npm` is a tiny CLI for a repetitive problem: getting JavaScript package managers authenticated against private Azure DevOps Artifacts feeds without turning setup into a manual ritual.
+`az-npm` is a tiny CLI for a repetitive problem: getting JavaScript package managers authenticated against private [Azure DevOps Artifacts](https://learn.microsoft.com/en-us/azure/devops/artifacts/) NPM feeds without turning setup into a manual ritual.
 
-The tool uses the Azure CLI as the authentication anchor, then writes the right credentials for `npm`, `pnpm`, or `bun` so private registry access feels like a one-command step instead of a half-hour context switch.
+## How it works
+
+> 💡 **Prerequisite**: You need to have the [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) installed and authenticated with access to the relevant Azure DevOps organization.
+
+In a folder with an .npmrc that points to an Azure Artifacts feed, run:
+
+```bash
+npx @eimerreis/az-npm
+```
+The tool uses the Azure CLI as the authentication anchor, then writes the right credentials for `npm`, `pnpm`, or `bun` so private registry access is actually a one-command step.
 
 ## Why I made it
 
 I wanted a smaller, more predictable workflow for private package feeds. Most of the friction was never the package manager itself, it was the ceremony around tokens, config files, and remembering which machine was already authenticated.
+Leveraging the Azure CLI meant I could piggyback on an existing authentication flow.
 
 ## What it does
 
