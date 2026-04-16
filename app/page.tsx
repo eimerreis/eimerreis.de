@@ -106,7 +106,7 @@ export default async function HomePage() {
 
       <div className="-mx-6 mb-24 reveal delay-2 overflow-hidden border-y border-line">
         <Marquee
-          text="LATEST WRITING • MUSIC & CULTURE • THOUGHTS • ESSAYS • NOTES"
+          text="LATEST WRITING • MUSIC • THOUGHTS • NOTES"
           className="bg-paperSoft text-muted"
         />
       </div>
